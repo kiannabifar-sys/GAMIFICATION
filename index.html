@@ -3,296 +3,297 @@
 <html lang="fa" dir="rtl">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#0b0b14">
-<meta name="description" content="LEVELUP؛ فضای هوشمند برای یادگیری، برنامه‌ریزی، ساخت پروژه و رشد فردی.">
-<title>LEVELUP | Learn. Build. Grow.</title>
-
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#101014">
+<meta name="description" content="GAMFICATION - Play games, earn XP, unlock achievements and beat your records.">
+<title>GAMFICATION | Play to Win</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Vazirmatn:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Vazirmatn:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 
 <style>
 :root{
-  --bg:#090912;
-  --surface:#11111e;
-  --surface2:#171729;
-  --surface3:#202039;
-  --text:#f5f5ff;
-  --muted:#a1a1bd;
+  --bg:#0b0b0e;
+  --panel:#141419;
+  --panel2:#1b1b22;
+  --panel3:#25252e;
+  --text:#f6f6f8;
+  --muted:#9999a8;
+  --red:#ff3045;
+  --red2:#c9152a;
   --border:rgba(255,255,255,.09);
-  --purple:#8b5cf6;
-  --blue:#38bdf8;
-  --green:#4ade80;
-  --pink:#f472b6;
-  --yellow:#fbbf24;
-  --radius:20px;
-  --shadow:0 18px 55px rgba(0,0,0,.22);
-}
-body.light{
-  --bg:#f5f5fb;
-  --surface:#ffffff;
-  --surface2:#f0effa;
-  --surface3:#e6e4f6;
-  --text:#19182b;
-  --muted:#666681;
-  --border:rgba(30,25,70,.12);
-  --shadow:0 18px 45px rgba(50,40,100,.08);
+  --green:#44e0a1;
+  --yellow:#ffc857;
+  --radius:18px;
 }
 *{box-sizing:border-box}
-html{scroll-behavior:smooth;scroll-padding-top:100px}
+html{scroll-behavior:smooth;scroll-padding-top:90px}
 body{
   margin:0;background:var(--bg);color:var(--text);
-  font-family:"Vazirmatn","Inter",sans-serif;
-  transition:background .25s,color .25s;
-  min-height:100vh;
+  font-family:"Vazirmatn",sans-serif;min-height:100vh;
 }
 body.en{font-family:"Inter",sans-serif}
-button,input,textarea,select{font:inherit}
+button,input{font:inherit}
 button{cursor:pointer}
-a{color:inherit;text-decoration:none}
-button:focus-visible,a:focus-visible,input:focus-visible,textarea:focus-visible{
-  outline:2px solid var(--blue);outline-offset:3px
+button:focus-visible,a:focus-visible,input:focus-visible{
+  outline:2px solid var(--red);outline-offset:3px
 }
-::selection{background:var(--purple);color:white}
+a{color:inherit;text-decoration:none}
+button:disabled{opacity:.5;cursor:not-allowed;transform:none!important}
 .container{width:min(1180px,92%);margin:auto}
 .muted{color:var(--muted)}
-.small{font-size:13px}
-.gradient-text{
-  background:linear-gradient(110deg,#c4b5fd,#818cf8,#38bdf8);
-  -webkit-background-clip:text;background-clip:text;color:transparent
+.small{font-size:12px}
+.red{color:var(--red)}
+.gradient{
+  background:linear-gradient(110deg,#ff6877,#ff3045,#ff9b62);
+  color:transparent;background-clip:text;-webkit-background-clip:text
 }
 .topbar{
-  position:sticky;top:0;z-index:50;
-  background:color-mix(in srgb,var(--bg) 82%,transparent);
-  backdrop-filter:blur(18px);
-  border-bottom:1px solid var(--border);
+  position:sticky;top:0;z-index:30;
+  background:rgba(11,11,14,.88);backdrop-filter:blur(18px);
+  border-bottom:1px solid var(--border)
 }
 .nav{
-  min-height:76px;display:flex;align-items:center;justify-content:space-between;
-  gap:20px;
+  min-height:72px;display:flex;align-items:center;
+  justify-content:space-between;gap:18px
 }
-.brand{display:flex;align-items:center;gap:11px;font-weight:800;font-size:21px;white-space:nowrap}
-.brand-logo{
-  width:43px;height:43px;display:grid;place-items:center;border-radius:14px;
-  background:linear-gradient(135deg,#8b5cf6,#38bdf8);color:white;
-  font-size:21px;box-shadow:0 8px 24px #8b5cf633
+.brand{display:flex;align-items:center;gap:10px;font-weight:900;font-size:20px;white-space:nowrap}
+.brand-icon{
+  display:grid;place-items:center;width:41px;height:41px;
+  background:var(--red);border-radius:12px;color:#fff;
+  font-weight:900;box-shadow:0 5px 25px #ff30452b
 }
-.nav-links{display:flex;align-items:center;gap:5px;flex-wrap:wrap}
-.nav-links a{
-  padding:10px 12px;border-radius:12px;color:var(--muted);
-  font-size:13px;transition:.2s
+.navlinks{display:flex;gap:5px;align-items:center}
+.navlinks a{padding:10px 12px;border-radius:10px;color:var(--muted);font-size:13px}
+.navlinks a:hover{color:white;background:var(--panel2)}
+.navactions{display:flex;align-items:center;gap:8px}
+.btn,.iconbtn{
+  display:inline-flex;align-items:center;justify-content:center;gap:7px;
+  padding:10px 14px;border:1px solid var(--border);border-radius:11px;
+  background:var(--panel2);color:var(--text);transition:.2s
 }
-.nav-links a:hover,.nav-links a.active{color:var(--text);background:var(--surface2)}
-.nav-actions{display:flex;gap:8px;align-items:center}
-.icon-btn,.btn{
-  border:1px solid var(--border);background:var(--surface2);
-  color:var(--text);border-radius:12px;padding:10px 13px;
-  transition:transform .2s,border-color .2s,background .2s
-}
-.icon-btn:hover,.btn:hover{transform:translateY(-2px);border-color:#8b5cf6}
-.btn-primary{
-  border:0;background:linear-gradient(115deg,#7c3aed,#4f46e5);
-  color:#fff;font-weight:700;box-shadow:0 8px 24px #7c3aed25
-}
-.btn-secondary{background:var(--surface2)}
-.btn-sm{padding:8px 11px;font-size:13px}
-.mobile-toggle{display:none}
-.section{padding:65px 0;scroll-margin-top:85px}
-.hero{padding:74px 0 48px;position:relative;overflow:hidden}
+.btn:hover,.iconbtn:hover{border-color:var(--red);transform:translateY(-2px)}
+.btn-red{background:var(--red);border-color:var(--red);color:white;font-weight:800}
+.btn-red:hover{background:#e72539;border-color:#e72539}
+.btn-sm{font-size:12px;padding:8px 11px}
+.mobile{display:none}
+.hero{padding:65px 0 48px;position:relative;overflow:hidden}
 .hero:before{
-  content:"";position:absolute;width:420px;height:420px;top:-180px;right:-130px;
-  background:#7c3aed22;filter:blur(100px);pointer-events:none
+  content:"";position:absolute;width:430px;height:430px;
+  top:-200px;right:-150px;background:#ff30451b;filter:blur(100px)
 }
-.hero:after{
-  content:"";position:absolute;width:350px;height:350px;bottom:-180px;left:-100px;
-  background:#0ea5e922;filter:blur(90px);pointer-events:none
-}
-.hero-grid{display:grid;grid-template-columns:1.12fr .88fr;gap:48px;align-items:center}
+.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:45px;align-items:center;position:relative}
 .eyebrow{
-  display:inline-flex;align-items:center;gap:8px;padding:8px 13px;
-  border:1px solid var(--border);background:var(--surface);
-  color:var(--muted);border-radius:999px;font-size:12px
+  display:inline-flex;align-items:center;gap:8px;
+  border:1px solid #ff30453b;color:#ff7380;background:#ff30450d;
+  padding:8px 12px;border-radius:99px;font-size:12px;font-weight:700
 }
-.dot{width:8px;height:8px;border-radius:50%;background:var(--green);box-shadow:0 0 12px #4ade80}
-.hero h1{font-size:clamp(38px,5vw,65px);line-height:1.2;letter-spacing:-1.8px;margin:22px 0}
-.hero p{color:var(--muted);line-height:2.1;font-size:16px;max-width:620px}
-.hero-buttons{display:flex;gap:12px;flex-wrap:wrap;margin-top:25px}
-.hero-buttons .btn{padding:13px 19px}
-.hero-note{font-size:12px;color:var(--muted);margin-top:17px}
-.preview{
-  border:1px solid var(--border);background:linear-gradient(145deg,var(--surface),var(--surface2));
-  border-radius:28px;padding:22px;box-shadow:var(--shadow);position:relative;
-  animation:float 6s ease-in-out infinite
+.live-dot{width:7px;height:7px;background:var(--red);border-radius:50%;box-shadow:0 0 12px var(--red)}
+.hero h1{font-size:clamp(40px,5.5vw,70px);line-height:1.2;margin:22px 0 15px;font-weight:900;letter-spacing:-1px}
+.hero p{max-width:590px;color:var(--muted);line-height:2.1;font-size:15px}
+.hero-buttons{display:flex;gap:10px;flex-wrap:wrap;margin-top:24px}
+.hero-buttons .btn{padding:13px 18px}
+.hero-meta{display:flex;gap:20px;flex-wrap:wrap;margin-top:25px;color:var(--muted);font-size:12px}
+.hero-meta strong{color:white}
+.hero-art{
+  position:relative;min-height:320px;border:1px solid var(--border);
+  border-radius:25px;background:
+  radial-gradient(ellipse at 50% 35%,#ff304521,transparent 55%),
+  linear-gradient(145deg,#1c1c25,#101014);
+  display:flex;align-items:center;justify-content:center;overflow:hidden
 }
-@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
-.preview-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:20px}
-.avatar{width:42px;height:42px;display:grid;place-items:center;border-radius:14px;background:#8b5cf622}
-.preview-stat{padding:17px;border:1px solid var(--border);background:var(--surface);border-radius:17px}
-.preview-stat strong{font-size:26px;display:block;margin:8px 0}
-.preview-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-.progress{height:7px;background:var(--surface3);border-radius:99px;overflow:hidden}
-.progress span{display:block;height:100%;background:linear-gradient(90deg,var(--purple),var(--blue));border-radius:99px;transition:width .4s}
-.preview-task{display:flex;align-items:center;gap:10px;padding:12px 0;border-bottom:1px solid var(--border);font-size:13px}
-.preview-task:last-child{border-bottom:0}
-.section-head{display:flex;justify-content:space-between;align-items:end;gap:18px;margin-bottom:27px}
-.section-head h2{font-size:clamp(25px,3vw,35px);margin:0 0 8px}
-.section-head p{color:var(--muted);margin:0;line-height:1.9}
-.grid{display:grid;gap:16px}
-.grid-2{grid-template-columns:repeat(2,minmax(0,1fr))}
-.grid-3{grid-template-columns:repeat(3,minmax(0,1fr))}
-.grid-4{grid-template-columns:repeat(4,minmax(0,1fr))}
+.hero-art:before,.hero-art:after{
+  content:"";position:absolute;width:260px;height:260px;
+  border:1px solid #ff30452e;transform:rotate(45deg);border-radius:30px
+}
+.hero-art:after{width:190px;height:190px;border-color:#ff30454a}
+.art-center{text-align:center;z-index:1}
+.art-mark{font-size:100px;font-weight:900;line-height:1;text-shadow:0 0 40px #ff30455c;color:var(--red)}
+.art-label{letter-spacing:5px;font-size:13px;font-weight:900;margin-top:15px}
+.art-caption{color:var(--muted);font-size:11px;margin-top:8px}
+.floating{
+  position:absolute;background:#1b1b22;border:1px solid var(--border);
+  border-radius:12px;padding:12px 15px;font-size:12px;
+  box-shadow:0 15px 35px #0005
+}
+.float-a{top:28px;left:20px}
+.float-b{bottom:28px;right:18px}
+.section{padding:46px 0;scroll-margin-top:85px}
+.section-head{display:flex;align-items:end;justify-content:space-between;gap:15px;margin-bottom:23px}
+.section-head h2{margin:0 0 7px;font-size:27px}
+.section-head p{margin:0;color:var(--muted);font-size:13px;line-height:1.9}
+.badge{
+  font-size:11px;color:var(--red);background:#ff304512;
+  border:1px solid #ff30452c;padding:6px 10px;border-radius:8px
+}
+.grid{display:grid;gap:15px}
+.games-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
 .card{
-  background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);
-  padding:22px;transition:transform .22s,border-color .22s,box-shadow .22s;min-width:0
+  background:var(--panel);border:1px solid var(--border);
+  border-radius:var(--radius);overflow:hidden;min-width:0;transition:.2s
 }
-.card:hover{transform:translateY(-4px);border-color:#8b5cf655;box-shadow:var(--shadow)}
-.card-icon{
-  width:48px;height:48px;border-radius:15px;display:grid;place-items:center;
-  font-size:23px;background:#8b5cf620;margin-bottom:17px
+.card:hover{border-color:#ff30455c;transform:translateY(-4px)}
+.game-cover{
+  height:145px;display:grid;place-items:center;position:relative;overflow:hidden;
+  background:linear-gradient(135deg,#251218,#141419)
 }
-.card h3{margin:0 0 9px;font-size:18px}
-.card p{margin:0;color:var(--muted);font-size:13px;line-height:2}
-.card-link{display:inline-flex;margin-top:17px;color:#a78bfa;font-size:13px;font-weight:700}
-.tag{
-  display:inline-flex;border:1px solid var(--border);border-radius:999px;
-  padding:5px 9px;font-size:11px;color:var(--muted);margin:3px 3px 0 0
+.game-cover:before{
+  content:"";position:absolute;width:170px;height:170px;
+  border:1px solid #ff30452b;border-radius:50%
 }
-.featured{
-  background:linear-gradient(135deg,#241746,#14162b 65%,#102536);
-  border-color:#8b5cf644;color:white
+.game-cover:after{
+  content:"";position:absolute;width:115px;height:115px;
+  border:1px solid #ff304544;border-radius:50%
 }
-body.light .featured{background:linear-gradient(135deg,#eee7ff,#edf3ff)}
-.pill{font-size:11px;padding:5px 9px;border-radius:999px;background:#4ade801c;color:var(--green)}
-.panel{
-  border:1px solid var(--border);background:var(--surface);border-radius:24px;padding:23px
+.game-emoji{font-size:55px;z-index:1;filter:drop-shadow(0 0 18px #ff30455c)}
+.cover-2{background:linear-gradient(135deg,#1a1428,#141419)}
+.cover-3{background:linear-gradient(135deg,#102821,#141419)}
+.cover-4{background:linear-gradient(135deg,#292010,#141419)}
+.cover-5{background:linear-gradient(135deg,#111f31,#141419)}
+.game-info{padding:18px}
+.game-top{display:flex;justify-content:space-between;align-items:center;gap:10px}
+.game-info h3{margin:0;font-size:17px}
+.game-info p{font-size:12px;color:var(--muted);line-height:1.9;min-height:45px}
+.game-meta{display:flex;gap:7px;flex-wrap:wrap;margin:12px 0}
+.tag{font-size:10px;color:var(--muted);background:var(--panel2);padding:5px 8px;border-radius:6px}
+.game-info .btn{width:100%}
+.play-area{padding:20px;border:1px solid var(--border);border-radius:20px;background:var(--panel)}
+.game-panel{display:none}
+.game-panel.active{display:block;animation:fadein .25s}
+@keyframes fadein{from{opacity:0;transform:translateY(7px)}to{opacity:1;transform:translateY(0)}}
+.play-head{display:flex;justify-content:space-between;gap:15px;align-items:center;flex-wrap:wrap;margin-bottom:20px}
+.play-head h3{margin:0 0 5px;font-size:21px}
+.play-head p{margin:0;color:var(--muted);font-size:12px}
+.game-stage{
+  min-height:250px;border:1px solid var(--border);border-radius:16px;
+  background:var(--bg);display:flex;flex-direction:column;
+  align-items:center;justify-content:center;text-align:center;padding:22px;gap:14px
 }
-.panel h3{margin-top:0}
-.field{display:flex;flex-direction:column;gap:7px;margin-bottom:14px}
-.field label{font-size:13px;color:var(--muted)}
-.field input,.field textarea,.field select,.search-input{
-  width:100%;padding:12px 13px;border:1px solid var(--border);border-radius:12px;
-  background:var(--surface2);color:var(--text);outline:none
+.stage-title{font-size:23px;font-weight:900}
+.stage-text{color:var(--muted);font-size:13px;line-height:1.9}
+.big-number{font-size:52px;font-weight:900;color:var(--red);font-variant-numeric:tabular-nums}
+.statline{display:flex;gap:10px;flex-wrap:wrap;margin-top:15px}
+.stat{
+  flex:1;min-width:95px;padding:13px;background:var(--panel2);
+  border:1px solid var(--border);border-radius:12px
 }
-.field input:focus,.field textarea:focus,.field select:focus{border-color:var(--purple)}
-.field textarea{resize:vertical;min-height:105px;line-height:1.8}
-.field select option{background:var(--surface)}
-.form-row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-.task-list{display:flex;flex-direction:column;gap:9px;margin-top:15px}
-.task{
-  display:flex;align-items:center;gap:10px;padding:12px;
-  background:var(--surface2);border:1px solid var(--border);border-radius:13px
+.stat strong{display:block;font-size:21px;margin-bottom:4px}
+.stat span{font-size:11px;color:var(--muted)}
+.reaction-pad{
+  width:100%;min-height:175px;border:0;border-radius:13px;
+  background:#24242e;color:white;font-weight:900;font-size:20px
 }
-.task input[type=checkbox]{accent-color:var(--purple);width:17px;height:17px}
-.task .task-text{flex:1;font-size:13px;overflow-wrap:anywhere}
-.task.done .task-text{text-decoration:line-through;color:var(--muted)}
-.task small{display:block;color:var(--muted);font-size:11px;margin-top:3px}
-.empty{color:var(--muted);font-size:13px;text-align:center;padding:20px 5px}
-.timer-wrap{text-align:center;padding:12px 0}
-.timer-ring{
-  width:205px;height:205px;margin:14px auto 20px;border-radius:50%;
-  display:grid;place-items:center;position:relative;
-  background:conic-gradient(var(--purple) var(--timer-progress,0%),var(--surface3) 0)
+.reaction-pad.waiting{background:#a61b2c}
+.reaction-pad.ready{background:#167b4d}
+.reaction-pad.tooearly{background:#6b3c12}
+.click-target{
+  width:120px;height:120px;border:0;border-radius:50%;background:var(--red);
+  color:white;font-size:29px;font-weight:900;box-shadow:0 0 35px #ff30453a;
+  transition:transform .1s
 }
-.timer-ring:before{content:"";position:absolute;inset:9px;border-radius:50%;background:var(--surface)}
-.timer-content{z-index:1}
-.timer-time{font-size:40px;font-weight:800;letter-spacing:1px;font-variant-numeric:tabular-nums}
-.timer-controls{display:flex;gap:8px;justify-content:center;flex-wrap:wrap}
-.timer-modes{display:flex;justify-content:center;gap:6px;flex-wrap:wrap}
-.timer-modes button{font-size:12px}
-.course-top{display:flex;justify-content:space-between;gap:12px;align-items:center;margin-bottom:15px}
-.course-symbol{width:45px;height:45px;display:grid;place-items:center;border-radius:14px;font-size:22px;background:#38bdf81c}
-.course-meta{display:flex;gap:8px;flex-wrap:wrap;margin-top:15px}
-.course-progress{margin-top:16px}
-.course-progress .progress{margin-top:7px}
-.tool-output{
-  padding:15px;background:var(--surface2);border:1px solid var(--border);
-  border-radius:14px;white-space:pre-wrap;line-height:1.9;font-size:13px;
-  overflow-wrap:anywhere;min-height:54px
+.click-target:active{transform:scale(.92)}
+.memory-grid{
+  display:grid;grid-template-columns:repeat(4,minmax(50px,76px));gap:9px;
+  justify-content:center;margin:12px auto
 }
-.notice{
-  padding:14px 16px;border:1px solid #fbbf2438;background:#fbbf240b;
-  border-radius:14px;color:var(--muted);font-size:12px;line-height:2
+.memory-card{
+  aspect-ratio:1;border:1px solid var(--border);border-radius:12px;
+  background:var(--panel2);color:var(--text);font-size:26px;
+  display:grid;place-items:center;transition:.2s
 }
-.stats-row{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:20px}
-.stat-box{background:var(--surface2);border-radius:15px;padding:16px}
-.stat-box strong{display:block;font-size:24px;margin-bottom:5px}
-.stat-box span{color:var(--muted);font-size:12px}
-.footer{padding:35px 0;border-top:1px solid var(--border);margin-top:40px}
-.footer-inner{display:flex;justify-content:space-between;gap:20px;align-items:center;flex-wrap:wrap}
-.footer p{font-size:12px;color:var(--muted);line-height:1.9}
+.memory-card.flipped,.memory-card.matched{background:#ff30451c;border-color:#ff30456b}
+.memory-card.matched{color:var(--green)}
+.number-input{max-width:190px;text-align:center;font-size:22px}
+.ttt-board{display:grid;grid-template-columns:repeat(3,90px);gap:8px;direction:ltr}
+.ttt-cell{
+  width:90px;height:90px;background:var(--panel2);border:1px solid var(--border);
+  border-radius:13px;font-size:36px;font-weight:900;color:var(--red)
+}
+.ttt-cell:disabled{opacity:1}
+.ttt-cell.x{color:var(--red)}
+.ttt-cell.o{color:#6baaff}
+.leader-layout{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.profile{padding:22px;background:linear-gradient(135deg,#281116,#17171d);border:1px solid #ff304532;border-radius:20px}
+.profile-top{display:flex;gap:14px;align-items:center}
+.profile-avatar{
+  width:60px;height:60px;display:grid;place-items:center;border-radius:17px;
+  background:var(--red);font-size:26px;font-weight:900
+}
+.profile h3{margin:0 0 4px}
+.level-number{font-size:32px;font-weight:900;color:var(--red)}
+.xpbar{height:9px;background:#33313b;border-radius:99px;overflow:hidden;margin:10px 0}
+.xpbar span{height:100%;display:block;width:0;background:linear-gradient(90deg,#c9152a,#ff6574);transition:width .3s}
+.achievement-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.achievement{
+  padding:14px;border:1px solid var(--border);background:var(--panel);
+  border-radius:13px;display:flex;align-items:center;gap:11px
+}
+.achievement.locked{opacity:.42;filter:grayscale(1)}
+.achievement-icon{font-size:24px}
+.achievement strong{display:block;font-size:12px}
+.achievement small{display:block;color:var(--muted);font-size:10px;margin-top:4px}
+.note{
+  padding:14px;border:1px solid #ffc85733;background:#ffc85709;
+  color:var(--muted);font-size:12px;line-height:2;border-radius:12px
+}
+.footer{margin-top:35px;border-top:1px solid var(--border);padding:27px 0}
+.footer-inner{display:flex;justify-content:space-between;gap:15px;align-items:center;flex-wrap:wrap}
+.footer p{font-size:12px;color:var(--muted)}
 .toast{
-  position:fixed;bottom:22px;left:22px;z-index:100;
-  background:var(--surface3);color:var(--text);border:1px solid var(--border);
-  padding:13px 18px;border-radius:14px;box-shadow:var(--shadow);
-  opacity:0;transform:translateY(15px);pointer-events:none;transition:.25s;
-  max-width:min(380px,90vw);font-size:13px
+  position:fixed;bottom:20px;left:20px;z-index:90;max-width:90vw;
+  padding:13px 17px;background:#27272f;border:1px solid var(--border);
+  border-radius:12px;box-shadow:0 15px 40px #0008;font-size:13px;
+  opacity:0;transform:translateY(10px);pointer-events:none;transition:.25s
 }
 .toast.show{opacity:1;transform:translateY(0)}
-.reveal{animation:appear .6s both}
-@keyframes appear{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:translateY(0)}}
 .hidden{display:none!important}
-hr{border:0;border-top:1px solid var(--border);margin:20px 0}
-kbd{padding:3px 7px;background:var(--surface3);border-radius:5px;font-size:11px}
-@media(max-width:1000px){
-  .nav-links{gap:0}.nav-links a{padding:9px 8px;font-size:12px}
-  .grid-4{grid-template-columns:repeat(2,minmax(0,1fr))}
-  .hero-grid{gap:25px}
+@media(max-width:900px){
+  .games-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .navlinks a{padding:9px 7px;font-size:12px}
 }
-@media(max-width:760px){
-  .nav{min-height:68px;flex-wrap:wrap;padding:10px 0}
-  .mobile-toggle{display:inline-flex}
-  .nav-links{display:none;order:3;width:100%;padding:8px 0 4px;flex-direction:column;align-items:stretch}
-  .nav-links.open{display:flex}
-  .nav-links a{padding:12px}
-  .nav-actions .btn-primary{display:none}
-  .hero{padding:45px 0 25px}
-  .hero-grid{grid-template-columns:1fr}
+@media(max-width:680px){
+  .nav{min-height:66px;flex-wrap:wrap;padding:9px 0}
+  .mobile{display:inline-flex}
+  .navlinks{display:none;order:3;width:100%;flex-direction:column;align-items:stretch;padding-bottom:8px}
+  .navlinks.open{display:flex}
+  .navlinks a{padding:12px}
+  .navactions .profile-link{display:none}
+  .hero{padding:40px 0 25px}
+  .hero-grid{grid-template-columns:1fr;gap:24px}
   .hero h1{font-size:43px}
-  .preview{max-width:520px;margin:10px auto 0;width:100%}
-  .section{padding:45px 0}
-  .grid-3,.grid-2{grid-template-columns:1fr}
+  .hero-art{min-height:250px}
+  .section{padding:34px 0}
   .section-head{align-items:start;flex-direction:column}
-  .form-row{grid-template-columns:1fr}
-  .stats-row{grid-template-columns:1fr 1fr}
-}
-@media(max-width:420px){
-  .grid-4{grid-template-columns:1fr}
-  .brand{font-size:18px}
-  .brand-logo{width:38px;height:38px}
-  .hero h1{font-size:36px}
-  .preview-grid{grid-template-columns:1fr 1fr}
-  .card,.panel{padding:17px}
-  .timer-ring{width:180px;height:180px}
-  .timer-time{font-size:34px}
+  .games-grid{grid-template-columns:1fr}
+  .game-cover{height:160px}
+  .leader-layout{grid-template-columns:1fr}
+  .achievement-list{grid-template-columns:1fr 1fr}
+  .ttt-board{grid-template-columns:repeat(3,min(25vw,90px))}
+  .ttt-cell{width:min(25vw,90px);height:min(25vw,90px)}
+  .play-area{padding:13px}
 }
 @media(prefers-reduced-motion:reduce){
-  *,*::before,*::after{scroll-behavior:auto!important;animation:none!important;transition:none!important}
+  *,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
 }
 </style>
 </head>
-
 <body>
 <header class="topbar">
   <div class="container nav">
-    <a href="#home" class="brand" aria-label="LEVELUP home">
-      <span class="brand-logo">L+</span>
-      <span>LEVEL<span class="gradient-text">UP</span></span>
+    <a href="#home" class="brand">
+      <span class="brand-icon">G</span>
+      <span>GAM<span class="gradient">FICATION</span></span>
     </a>
-
-    <nav class="nav-links" id="navLinks">
-      <a href="#home" class="active" data-fa="خانه" data-en="Home">خانه</a>
-      <a href="#dashboard" data-fa="داشبورد" data-en="Dashboard">داشبورد</a>
-      <a href="#learning" data-fa="یادگیری" data-en="Learning">یادگیری</a>
-      <a href="#tools" data-fa="ابزارها" data-en="Tools">ابزارها</a>
-      <a href="#about" data-fa="درباره ما" data-en="About">درباره ما</a>
+    <nav class="navlinks" id="navlinks">
+      <a href="#home" data-fa="خانه" data-en="Home">خانه</a>
+      <a href="#games" data-fa="بازی‌ها" data-en="Games">بازی‌ها</a>
+      <a href="#arena" data-fa="میدان بازی" data-en="Arena">میدان بازی</a>
+      <a href="#profile" data-fa="پروفایل" data-en="Profile">پروفایل</a>
     </nav>
-
-    <div class="nav-actions">
-      <button class="icon-btn" id="languageBtn" type="button" aria-label="Change language">EN</button>
-      <button class="icon-btn" id="themeBtn" type="button" aria-label="Toggle theme">☀️</button>
-      <a class="btn btn-primary btn-sm" href="#dashboard" data-fa="شروع کن ↗" data-en="Get Started ↗">شروع کن ↗</a>
-      <button class="icon-btn mobile-toggle" id="menuBtn" type="button" aria-label="Open menu">☰</button>
+    <div class="navactions">
+      <button class="iconbtn btn-sm" id="langBtn">EN</button>
+      <a href="#profile" class="btn btn-red btn-sm profile-link">XP <span id="navXP">0</span></a>
+      <button class="iconbtn mobile" id="mobileBtn" aria-label="Menu">☰</button>
     </div>
   </div>
 </header>
@@ -300,889 +301,613 @@ kbd{padding:3px 7px;background:var(--surface3);border-radius:5px;font-size:11px}
 <main>
 <section class="hero" id="home">
   <div class="container hero-grid">
-    <div class="reveal">
-      <span class="eyebrow"><span class="dot"></span>
-        <span data-fa="فضای رشد و پیشرفت تو" data-en="Your personal growth space">فضای رشد و پیشرفت تو</span>
-      </span>
-
-      <h1>
-        <span data-fa="نسخه‌ی بهتر" data-en="Build a better">نسخه‌ی بهتر</span><br>
-        <span class="gradient-text" data-fa="خودت را بساز." data-en="version of you.">خودت را بساز.</span>
-      </h1>
-
-      <p data-fa="یاد بگیر، برنامه‌ریزی کن، ایده‌هایت را به پروژه تبدیل کن و هر روز یک قدم جلوتر برو. LEVELUP فضای شخصی تو برای یادگیری و ساختن است." data-en="Learn new skills, plan your day, turn ideas into projects, and make progress every day. LEVELUP is your personal space to learn and build.">
-        یاد بگیر، برنامه‌ریزی کن، ایده‌هایت را به پروژه تبدیل کن و هر روز یک قدم جلوتر برو. LEVELUP فضای شخصی تو برای یادگیری و ساختن است.
-      </p>
-
+    <div>
+      <span class="eyebrow"><span class="live-dot"></span><span data-fa="به میدان بازی خوش آمدی" data-en="WELCOME TO THE ARENA">به میدان بازی خوش آمدی</span></span>
+      <h1><span data-fa="بازی کن." data-en="PLAY HARD.">بازی کن.</span><br><span class="gradient" data-fa="رکورد بشکن." data-en="BREAK RECORDS.">رکورد بشکن.</span></h1>
+      <p data-fa="وارد دنیای GAMFICATION شو؛ بازی‌های سریع و فکری را تجربه کن، XP بگیر، سطح خودت را بالا ببر و رکوردهای جدید ثبت کن." data-en="Enter GAMFICATION: play arcade and brain games, earn XP, level up, and set new personal records.">وارد دنیای GAMFICATION شو؛ بازی‌های سریع و فکری را تجربه کن، XP بگیر، سطح خودت را بالا ببر و رکوردهای جدید ثبت کن.</p>
       <div class="hero-buttons">
-        <a class="btn btn-primary" href="#dashboard" data-fa="🚀 ورود به داشبورد" data-en="🚀 Open Dashboard">🚀 ورود به داشبورد</a>
-        <a class="btn btn-secondary" href="#learning" data-fa="کاوش مسیرها ←" data-en="Explore learning →">کاوش مسیرها ←</a>
+        <a class="btn btn-red" href="#games" data-fa="🎮 انتخاب بازی" data-en="🎮 Choose a game">🎮 انتخاب بازی</a>
+        <a class="btn" href="#profile" data-fa="🏆 پروفایل من" data-en="🏆 My profile">🏆 پروفایل من</a>
       </div>
-
-      <div class="hero-note" data-fa="✦ برنامه‌ریزی شخصی · یادگیری · ابزارهای کاربردی" data-en="✦ Personal planning · Learning · Useful tools">
-        ✦ برنامه‌ریزی شخصی · یادگیری · ابزارهای کاربردی
+      <div class="hero-meta">
+        <span>🎮 <strong>5</strong> <span data-fa="بازی قابل اجرا" data-en="Playable games">بازی قابل اجرا</span></span>
+        <span>⚡ <strong id="heroXP">0</strong> XP</span>
+        <span>🔥 <strong id="heroLevel">1</strong> <span data-fa="سطح" data-en="Level">سطح</span></span>
       </div>
     </div>
-
-    <div class="preview reveal">
-      <div class="preview-head">
-        <div>
-          <span class="muted small" data-fa="خوش آمدی به LEVELUP" data-en="Welcome to LEVELUP">خوش آمدی به LEVELUP</span>
-          <h3 style="margin:7px 0 0" data-fa="داشبورد پیشرفت" data-en="Your progress">داشبورد پیشرفت</h3>
-        </div>
-        <div class="avatar">✨</div>
+    <div class="hero-art">
+      <div class="floating float-a">🏆 <span data-fa="شکارچی رکورد" data-en="RECORD HUNTER">شکارچی رکورد</span></div>
+      <div class="art-center">
+        <div class="art-mark">G!</div>
+        <div class="art-label">GAMFICATION</div>
+        <div class="art-caption">PLAY • COMPETE • REPEAT</div>
       </div>
-
-      <div class="preview-grid">
-        <div class="preview-stat">
-          <span class="muted small" data-fa="کارهای امروز" data-en="Today's tasks">کارهای امروز</span>
-          <strong id="heroTaskCount">۰</strong>
-          <div class="progress"><span id="heroTaskProgress" style="width:0%"></span></div>
-        </div>
-        <div class="preview-stat">
-          <span class="muted small" data-fa="جلسات تمرکز" data-en="Focus sessions">جلسات تمرکز</span>
-          <strong id="heroFocusCount">۰</strong>
-          <span class="pill" data-fa="در مسیر رشد" data-en="Keep growing">در مسیر رشد</span>
-        </div>
-      </div>
-
-      <hr>
-      <div style="display:flex;justify-content:space-between;align-items:center">
-        <strong data-fa="قدم بعدی تو" data-en="Your next step">قدم بعدی تو</strong>
-        <span class="muted small">LEVEL UP</span>
-      </div>
-      <div class="preview-task"><span>🎯</span><span data-fa="یک هدف کوچک انتخاب کن" data-en="Choose one small goal">یک هدف کوچک انتخاب کن</span></div>
-      <div class="preview-task"><span>📚</span><span data-fa="۱۵ دقیقه چیز جدید یاد بگیر" data-en="Learn something for 15 minutes">۱۵ دقیقه چیز جدید یاد بگیر</span></div>
-      <div class="preview-task"><span>💡</span><span data-fa="ایده‌ات را یادداشت کن" data-en="Write down an idea">ایده‌ات را یادداشت کن</span></div>
+      <div class="floating float-b">🔴 <span data-fa="آماده‌ی بازی" data-en="READY TO PLAY">آماده‌ی بازی</span></div>
     </div>
   </div>
 </section>
 
-<section class="section" id="features">
+<section class="section" id="games">
   <div class="container">
     <div class="section-head">
       <div>
-        <h2 data-fa="یک فضا، کلی امکان" data-en="One space. More possibilities.">یک فضا، کلی امکان</h2>
-        <p data-fa="ابزارهایی برای تبدیل برنامه‌ها به پیشرفت واقعی." data-en="Tools that help turn plans into progress.">ابزارهایی برای تبدیل برنامه‌ها به پیشرفت واقعی.</p>
+        <h2 data-fa="انتخاب بازی" data-en="CHOOSE YOUR GAME">انتخاب بازی</h2>
+        <p data-fa="یک بازی انتخاب کن و شروع کن. همه‌ی بازی‌ها داخل همین سایت اجرا می‌شوند." data-en="Pick a game and jump in. Every game runs directly on this website.">یک بازی انتخاب کن و شروع کن. همه‌ی بازی‌ها داخل همین سایت اجرا می‌شوند.</p>
       </div>
-      <span class="tag">LEVELUP 1.0</span>
+      <span class="badge">5 GAMES AVAILABLE</span>
     </div>
 
-    <div class="grid grid-3">
+    <div class="grid games-grid">
       <article class="card">
-        <div class="card-icon">🎯</div>
-        <h3 data-fa="هدف‌گذاری هوشمند" data-en="Goal planning">هدف‌گذاری هوشمند</h3>
-        <p data-fa="هدف‌های خودت را بنویس، به قدم‌های کوچک تقسیم کن و روند پیشرفتت را دنبال کن." data-en="Write your goals, break them into small steps, and track your progress.">هدف‌های خودت را بنویس، به قدم‌های کوچک تقسیم کن و روند پیشرفتت را دنبال کن.</p>
-        <a href="#dashboard" class="card-link" data-fa="ثبت هدف ←" data-en="Set a goal →">ثبت هدف ←</a>
+        <div class="game-cover"><span class="game-emoji">⚡</span></div>
+        <div class="game-info">
+          <div class="game-top"><h3 data-fa="تست واکنش" data-en="Reaction Test">تست واکنش</h3><span class="badge">SKILL</span></div>
+          <p data-fa="سرعت واکنش خودت را بسنج. منتظر سبزشدن صفحه بمان و سریع کلیک کن!" data-en="Test your reflexes. Wait for the screen to turn green, then react fast!">سرعت واکنش خودت را بسنج. منتظر سبزشدن صفحه بمان و سریع کلیک کن!</p>
+          <div class="game-meta"><span class="tag" data-fa="سرعت" data-en="Reflex">سرعت</span><span class="tag">XP</span></div>
+          <button class="btn btn-red open-game" data-game="reaction" data-fa="بازی کن ←" data-en="PLAY NOW →">بازی کن ←</button>
+        </div>
       </article>
+
       <article class="card">
-        <div class="card-icon" style="background:#38bdf81c">📚</div>
-        <h3 data-fa="یادگیری مهارت" data-en="Skill learning">یادگیری مهارت</h3>
-        <p data-fa="از برنامه‌نویسی تا مدیریت زمان، مسیر یادگیری خودت را انتخاب کن." data-en="From coding to time management, choose your own learning path.">از برنامه‌نویسی تا مدیریت زمان، مسیر یادگیری خودت را انتخاب کن.</p>
-        <a href="#learning" class="card-link" data-fa="دیدن مسیرها ←" data-en="Explore paths →">دیدن مسیرها ←</a>
+        <div class="game-cover cover-2"><span class="game-emoji">👆</span></div>
+        <div class="game-info">
+          <div class="game-top"><h3 data-fa="کلیکر سرعتی" data-en="Speed Clicker">کلیکر سرعتی</h3><span class="badge">ARCADE</span></div>
+          <p data-fa="در ۱۰ ثانیه تا می‌توانی روی هدف بزن و رکوردت را ثبت کن." data-en="Hit the target as many times as you can in 10 seconds.">در ۱۰ ثانیه تا می‌توانی روی هدف بزن و رکوردت را ثبت کن.</p>
+          <div class="game-meta"><span class="tag" data-fa="سرعت" data-en="Speed">سرعت</span><span class="tag">10 SEC</span></div>
+          <button class="btn btn-red open-game" data-game="clicker" data-fa="بازی کن ←" data-en="PLAY NOW →">بازی کن ←</button>
+        </div>
       </article>
+
       <article class="card">
-        <div class="card-icon" style="background:#4ade801c">⚡</div>
-        <h3 data-fa="تمرکز عمیق" data-en="Deep focus">تمرکز عمیق</h3>
-        <p data-fa="با تایمر تمرکز، زمانت را مدیریت کن و حواس‌پرتی را کمتر کن." data-en="Manage your time with a focus timer and reduce distractions.">با تایمر تمرکز، زمانت را مدیریت کن و حواس‌پرتی را کمتر کن.</p>
-        <a href="#dashboard" class="card-link" data-fa="شروع تمرکز ←" data-en="Start focusing →">شروع تمرکز ←</a>
+        <div class="game-cover cover-3"><span class="game-emoji">🧠</span></div>
+        <div class="game-info">
+          <div class="game-top"><h3 data-fa="چالش حافظه" data-en="Memory Match">چالش حافظه</h3><span class="badge">BRAIN</span></div>
+          <p data-fa="کارت‌های هم‌شکل را پیدا کن و در کمترین حرکت همه‌ی جفت‌ها را کامل کن." data-en="Match every pair of cards in as few moves as possible.">کارت‌های هم‌شکل را پیدا کن و در کمترین حرکت همه‌ی جفت‌ها را کامل کن.</p>
+          <div class="game-meta"><span class="tag" data-fa="حافظه" data-en="Memory">حافظه</span><span class="tag">PUZZLE</span></div>
+          <button class="btn btn-red open-game" data-game="memory" data-fa="بازی کن ←" data-en="PLAY NOW →">بازی کن ←</button>
+        </div>
       </article>
+
       <article class="card">
-        <div class="card-icon" style="background:#f472b61c">💡</div>
-        <h3 data-fa="ایده‌پردازی" data-en="Idea lab">ایده‌پردازی</h3>
-        <p data-fa="ایده‌های تازه بساز و آن‌ها را به طرح اولیه‌ی یک پروژه تبدیل کن." data-en="Generate fresh ideas and turn them into a first project outline.">ایده‌های تازه بساز و آن‌ها را به طرح اولیه‌ی یک پروژه تبدیل کن.</p>
-        <a href="#tools" class="card-link" data-fa="ساخت ایده ←" data-en="Create an idea →">ساخت ایده ←</a>
+        <div class="game-cover cover-4"><span class="game-emoji">🔢</span></div>
+        <div class="game-info">
+          <div class="game-top"><h3 data-fa="حدس عدد" data-en="Number Guess">حدس عدد</h3><span class="badge">LOGIC</span></div>
+          <p data-fa="عدد مخفی بین ۱ تا ۱۰۰ را با کمترین تلاش پیدا کن." data-en="Find the hidden number between 1 and 100 with as few guesses as possible.">عدد مخفی بین ۱ تا ۱۰۰ را با کمترین تلاش پیدا کن.</p>
+          <div class="game-meta"><span class="tag" data-fa="منطق" data-en="Logic">منطق</span><span class="tag">1–100</span></div>
+          <button class="btn btn-red open-game" data-game="guess" data-fa="بازی کن ←" data-en="PLAY NOW →">بازی کن ←</button>
+        </div>
       </article>
+
       <article class="card">
-        <div class="card-icon" style="background:#fbbf241c">📝</div>
-        <h3 data-fa="یادداشت‌های شخصی" data-en="Personal notes">یادداشت‌های شخصی</h3>
-        <p data-fa="فکرها، برنامه‌ها و نکته‌های مهمت را در مرورگر ذخیره کن." data-en="Save your thoughts, plans, and important notes in your browser.">فکرها، برنامه‌ها و نکته‌های مهمت را در مرورگر ذخیره کن.</p>
-        <a href="#dashboard" class="card-link" data-fa="نوشتن یادداشت ←" data-en="Write a note →">نوشتن یادداشت ←</a>
-      </article>
-      <article class="card">
-        <div class="card-icon" style="background:#a78bfa1c">🤖</div>
-        <h3 data-fa="آزمایشگاه هوش مصنوعی" data-en="AI lab">آزمایشگاه هوش مصنوعی</h3>
-        <p data-fa="محیط آماده برای ابزارهای هوش مصنوعی؛ پاسخ واقعی پس از اتصال امن به API فعال می‌شود." data-en="An AI workspace that can provide real model responses after a secure API connection is configured.">محیط آماده برای ابزارهای هوش مصنوعی؛ پاسخ واقعی پس از اتصال امن به API فعال می‌شود.</p>
-        <a href="#tools" class="card-link" data-fa="ورود به آزمایشگاه ←" data-en="Open AI lab →">ورود به آزمایشگاه ←</a>
+        <div class="game-cover cover-5"><span class="game-emoji">⭕</span></div>
+        <div class="game-info">
+          <div class="game-top"><h3 data-fa="دوز" data-en="Tic-Tac-Toe">دوز</h3><span class="badge">CLASSIC</span></div>
+          <p data-fa="در برابر حریف کامپیوتری بازی کن و سه علامت را در یک خط قرار بده." data-en="Play against a simple computer opponent and line up three marks.">در برابر حریف کامپیوتری بازی کن و سه علامت را در یک خط قرار بده.</p>
+          <div class="game-meta"><span class="tag" data-fa="استراتژی" data-en="Strategy">استراتژی</span><span class="tag">VS CPU</span></div>
+          <button class="btn btn-red open-game" data-game="ttt" data-fa="بازی کن ←" data-en="PLAY NOW →">بازی کن ←</button>
+        </div>
       </article>
     </div>
   </div>
 </section>
 
-<section class="section" id="dashboard">
-  <div class="container">
-    <div class="section-head">
-      <div>
-        <h2 data-fa="داشبورد شخصی تو" data-en="Your personal dashboard">داشبورد شخصی تو</h2>
-        <p data-fa="برنامه‌ات را مرتب کن و هر قدم کوچک را ثبت کن." data-en="Organize your day and track every small step.">برنامه‌ات را مرتب کن و هر قدم کوچک را ثبت کن.</p>
-      </div>
-      <span class="pill" data-fa="ذخیره روی همین دستگاه" data-en="Saved on this device">ذخیره روی همین دستگاه</span>
+<section class="section" id="arena">
+<div class="container">
+  <div class="section-head">
+    <div>
+      <h2 data-fa="میدان بازی" data-en="GAME ARENA">میدان بازی</h2>
+      <p data-fa="بازی انتخابی‌ات اینجا اجرا می‌شود. برای رفتن به بازی دیگر، از فهرست بالا انتخاب کن." data-en="Your selected game runs here. Choose another game from the list whenever you want.">بازی انتخابی‌ات اینجا اجرا می‌شود. برای رفتن به بازی دیگر، از فهرست بالا انتخاب کن.</p>
+    </div>
+    <span class="badge" id="currentGameBadge">SELECT A GAME</span>
+  </div>
+
+  <div class="play-area">
+    <div id="noGame" class="game-stage">
+      <div style="font-size:48px">🎮</div>
+      <div class="stage-title" data-fa="آماده‌ای بازی کنی؟" data-en="Ready to play?">آماده‌ای بازی کنی؟</div>
+      <div class="stage-text" data-fa="یکی از پنج بازی را از بالا انتخاب کن تا شروع کنیم." data-en="Choose one of the five games above to get started.">یکی از پنج بازی را از بالا انتخاب کن تا شروع کنیم.</div>
+      <a class="btn btn-red" href="#games" data-fa="انتخاب بازی" data-en="Choose a game">انتخاب بازی</a>
     </div>
 
-    <div class="grid grid-2">
-      <div class="panel">
-        <h3>🎯 <span data-fa="کارهای من" data-en="My tasks">کارهای من</span></h3>
-        <p class="muted small" data-fa="یک کار مشخص بنویس و بعد از انجام آن، علامت بزن." data-en="Add a task and check it when complete.">یک کار مشخص بنویس و بعد از انجام آن، علامت بزن.</p>
-        <form id="taskForm">
-          <div class="field">
-            <label for="taskInput" data-fa="عنوان کار" data-en="Task title">عنوان کار</label>
-            <input id="taskInput" maxlength="120" required placeholder="مثلاً: ۲۰ دقیقه یادگیری HTML" data-placeholder-fa="مثلاً: ۲۰ دقیقه یادگیری HTML" data-placeholder-en="e.g. Learn HTML for 20 minutes">
-          </div>
-          <div class="form-row">
-            <div class="field">
-              <label for="taskCategory" data-fa="دسته‌بندی" data-en="Category">دسته‌بندی</label>
-              <select id="taskCategory">
-                <option value="study" data-fa="یادگیری" data-en="Learning">یادگیری</option>
-                <option value="project" data-fa="پروژه" data-en="Project">پروژه</option>
-                <option value="personal" data-fa="شخصی" data-en="Personal">شخصی</option>
-              </select>
-            </div>
-            <div class="field">
-              <label for="taskPriority" data-fa="اولویت" data-en="Priority">اولویت</label>
-              <select id="taskPriority">
-                <option value="normal" data-fa="معمولی" data-en="Normal">معمولی</option>
-                <option value="high" data-fa="زیاد" data-en="High">زیاد</option>
-              </select>
-            </div>
-          </div>
-          <button class="btn btn-primary" type="submit" data-fa="+ افزودن کار" data-en="+ Add task">+ افزودن کار</button>
+    <div class="game-panel" id="game-reaction">
+      <div class="play-head"><div><h3 data-fa="⚡ تست واکنش" data-en="⚡ Reaction Test">⚡ تست واکنش</h3><p data-fa="وقتی صفحه سبز شد، سریع کلیک کن." data-en="Click as soon as the screen turns green.">وقتی صفحه سبز شد، سریع کلیک کن.</p></div><button class="btn btn-sm" id="reactionStart" data-fa="شروع دور جدید" data-en="New round">شروع دور جدید</button></div>
+      <div class="game-stage">
+        <button class="reaction-pad" id="reactionPad" data-fa="برای شروع کلیک کن" data-en="Click to start">برای شروع کلیک کن</button>
+        <div class="stage-text" id="reactionMessage" aria-live="polite" data-fa="وقتی قرمز است کلیک نکن!" data-en="Don't click while it's red!">وقتی قرمز است کلیک نکن!</div>
+      </div>
+      <div class="statline"><div class="stat"><strong id="reactionResult">—</strong><span data-fa="زمان واکنش" data-en="Reaction time">زمان واکنش</span></div><div class="stat"><strong id="reactionBest">—</strong><span data-fa="بهترین رکورد" data-en="Personal best">بهترین رکورد</span></div></div>
+    </div>
+
+    <div class="game-panel" id="game-clicker">
+      <div class="play-head"><div><h3 data-fa="👆 کلیکر سرعتی" data-en="👆 Speed Clicker">👆 کلیکر سرعتی</h3><p data-fa="در ۱۰ ثانیه بیشترین تعداد کلیک را ثبت کن." data-en="Get as many clicks as possible in 10 seconds.">در ۱۰ ثانیه بیشترین تعداد کلیک را ثبت کن.</p></div><button class="btn btn-sm" id="clickerStart" data-fa="شروع بازی" data-en="Start game">شروع بازی</button></div>
+      <div class="game-stage">
+        <div class="big-number" id="clickCount">0</div>
+        <div class="stage-text" id="clickerMessage" data-fa="برای شروع، دکمه‌ی بازی را بزن." data-en="Press start to begin.">برای شروع، دکمه‌ی بازی را بزن.</div>
+        <button class="click-target" id="clickTarget" disabled>+1</button>
+        <div><span data-fa="زمان باقی‌مانده:" data-en="Time left:">زمان باقی‌مانده:</span> <strong id="clickTime">10</strong>s</div>
+      </div>
+      <div class="statline"><div class="stat"><strong id="clickBest">0</strong><span data-fa="بهترین کلیک" data-en="Best clicks">بهترین کلیک</span></div><div class="stat"><strong>10s</strong><span data-fa="مدت هر دور" data-en="Round length">مدت هر دور</span></div></div>
+    </div>
+
+    <div class="game-panel" id="game-memory">
+      <div class="play-head"><div><h3 data-fa="🧠 چالش حافظه" data-en="🧠 Memory Match">🧠 چالش حافظه</h3><p data-fa="همه‌ی جفت‌های مشابه را پیدا کن." data-en="Find every matching pair.">همه‌ی جفت‌های مشابه را پیدا کن.</p></div><button class="btn btn-sm" id="memoryStart" data-fa="شروع مجدد" data-en="Restart">شروع مجدد</button></div>
+      <div class="game-stage">
+        <div class="stage-text" id="memoryMessage" data-fa="برای شروع بازی، شروع مجدد را بزن." data-en="Press restart to begin.">برای شروع بازی، شروع مجدد را بزن.</div>
+        <div class="memory-grid" id="memoryGrid"></div>
+        <div><span data-fa="حرکت‌ها:" data-en="Moves:">حرکت‌ها:</span> <strong id="memoryMoves">0</strong>　|　<span data-fa="جفت‌ها:" data-en="Pairs:">جفت‌ها:</span> <strong id="memoryPairs">0/6</strong></div>
+      </div>
+      <div class="statline"><div class="stat"><strong id="memoryBest">—</strong><span data-fa="کمترین حرکت رکوردشده" data-en="Fewest moves">کمترین حرکت رکوردشده</span></div></div>
+    </div>
+
+    <div class="game-panel" id="game-guess">
+      <div class="play-head"><div><h3 data-fa="🔢 حدس عدد" data-en="🔢 Number Guess">🔢 حدس عدد</h3><p data-fa="عدد مخفی بین ۱ تا ۱۰۰ را پیدا کن." data-en="Find the hidden number between 1 and 100.">عدد مخفی بین ۱ تا ۱۰۰ را پیدا کن.</p></div><button class="btn btn-sm" id="guessReset" data-fa="عدد جدید" data-en="New number">عدد جدید</button></div>
+      <div class="game-stage">
+        <div class="stage-title" data-fa="به عدد مخفی فکر کن!" data-en="Find the hidden number!">به عدد مخفی فکر کن!</div>
+        <div class="stage-text" id="guessMessage" aria-live="polite" data-fa="یک عدد بین ۱ و ۱۰۰ وارد کن." data-en="Enter a number between 1 and 100.">یک عدد بین ۱ و ۱۰۰ وارد کن.</div>
+        <form id="guessForm" style="display:flex;gap:8px;justify-content:center;flex-wrap:wrap">
+          <input class="btn number-input" type="number" id="guessInput" min="1" max="100" required placeholder="1–100" aria-label="Your guess">
+          <button class="btn btn-red" type="submit" data-fa="حدس بزن" data-en="Guess">حدس بزن</button>
         </form>
-        <div class="stats-row">
-          <div class="stat-box"><strong id="taskTotal">۰</strong><span data-fa="کل کارها" data-en="Total tasks">کل کارها</span></div>
-          <div class="stat-box"><strong id="taskDone">۰</strong><span data-fa="انجام‌شده" data-en="Completed">انجام‌شده</span></div>
-          <div class="stat-box"><strong id="taskPercent">۰٪</strong><span data-fa="پیشرفت" data-en="Progress">پیشرفت</span></div>
-        </div>
-        <div class="task-list" id="taskList"></div>
-        <button class="btn btn-secondary btn-sm" id="clearDoneBtn" type="button" style="margin-top:13px" data-fa="حذف کارهای انجام‌شده" data-en="Remove completed tasks">حذف کارهای انجام‌شده</button>
+        <div><span data-fa="تعداد تلاش:" data-en="Attempts:">تعداد تلاش:</span> <strong id="guessAttempts">0</strong></div>
       </div>
-
-      <div class="panel">
-        <h3>⏱️ <span data-fa="تایمر تمرکز" data-en="Focus timer">تایمر تمرکز</span></h3>
-        <p class="muted small" data-fa="یک بازه انتخاب کن، کارهایت را کنار بگذار و تمرکز کن." data-en="Choose a session, set distractions aside, and focus.">یک بازه انتخاب کن، کارهایت را کنار بگذار و تمرکز کن.</p>
-
-        <div class="timer-wrap">
-          <div class="timer-modes">
-            <button class="btn btn-sm btn-secondary" data-minutes="5" type="button">۵ دقیقه</button>
-            <button class="btn btn-sm btn-secondary" data-minutes="15" type="button">۱۵ دقیقه</button>
-            <button class="btn btn-sm btn-secondary" data-minutes="25" type="button">۲۵ دقیقه</button>
-          </div>
-          <div class="timer-ring" id="timerRing">
-            <div class="timer-content">
-              <div class="timer-time" id="timerDisplay">25:00</div>
-              <div class="muted small" id="timerStatus" data-fa="آماده‌ی شروع" data-en="Ready to begin">آماده‌ی شروع</div>
-            </div>
-          </div>
-          <div class="timer-controls">
-            <button class="btn btn-primary" id="timerStart" type="button" data-fa="شروع" data-en="Start">شروع</button>
-            <button class="btn btn-secondary" id="timerReset" type="button" data-fa="شروع مجدد" data-en="Reset">شروع مجدد</button>
-          </div>
-          <p class="muted small" style="margin-top:15px">
-            <span data-fa="جلسات تکمیل‌شده:" data-en="Completed sessions:">جلسات تکمیل‌شده:</span>
-            <strong id="focusSessions">۰</strong>
-          </p>
-        </div>
-      </div>
+      <div class="statline"><div class="stat"><strong id="guessBest">—</strong><span data-fa="کمترین تلاش" data-en="Fewest attempts">کمترین تلاش</span></div></div>
     </div>
 
-    <div class="panel" style="margin-top:18px">
-      <h3>📝 <span data-fa="دفتر یادداشت" data-en="Quick notes">دفتر یادداشت</span></h3>
-      <p class="muted small" data-fa="یادداشت‌ها به‌طور خودکار در همین مرورگر ذخیره می‌شوند." data-en="Your notes are saved locally in this browser.">یادداشت‌ها به‌طور خودکار در همین مرورگر ذخیره می‌شوند.</p>
-      <div class="field">
-        <label for="notesInput" data-fa="ایده‌ها و یادداشت‌ها" data-en="Ideas and notes">ایده‌ها و یادداشت‌ها</label>
-        <textarea id="notesInput" maxlength="10000" placeholder="هر چیزی که می‌خواهی یادت بماند..." data-placeholder-fa="هر چیزی که می‌خواهی یادت بماند..." data-placeholder-en="Write down anything you want to remember..."></textarea>
+    <div class="game-panel" id="game-ttt">
+      <div class="play-head"><div><h3 data-fa="⭕ دوز" data-en="⭕ Tic-Tac-Toe">⭕ دوز</h3><p data-fa="تو X هستی؛ در برابر کامپیوتر بازی کن." data-en="You are X. Play against the computer.">تو X هستی؛ در برابر کامپیوتر بازی کن.</p></div><button class="btn btn-sm" id="tttReset" data-fa="بازی جدید" data-en="New game">بازی جدید</button></div>
+      <div class="game-stage">
+        <div class="stage-text" id="tttMessage" aria-live="polite" data-fa="نوبت تو است." data-en="Your turn.">نوبت تو است.</div>
+        <div class="ttt-board" id="tttBoard"></div>
+        <div class="small muted" data-fa="بردن بازی XP می‌دهد؛ مساوی هم تجربه‌ی بازی است!" data-en="Winning earns XP. A draw is still practice!">بردن بازی XP می‌دهد؛ مساوی هم تجربه‌ی بازی است!</div>
       </div>
-      <div style="display:flex;gap:10px;flex-wrap:wrap;align-items:center">
-        <button class="btn btn-primary" id="saveNotes" type="button" data-fa="ذخیره یادداشت" data-en="Save notes">ذخیره یادداشت</button>
-        <button class="btn btn-secondary" id="downloadNotes" type="button" data-fa="دریافت فایل متنی" data-en="Download text file">دریافت فایل متنی</button>
-        <span class="muted small" id="notesStatus" data-fa="ذخیره نشده" data-en="Not saved">ذخیره نشده</span>
-      </div>
+      <div class="statline"><div class="stat"><strong id="tttWins">0</strong><span data-fa="بردهای تو" data-en="Your wins">بردهای تو</span></div><div class="stat"><strong id="tttLosses">0</strong><span data-fa="بردهای کامپیوتر" data-en="CPU wins">بردهای کامپیوتر</span></div></div>
     </div>
   </div>
+</div>
 </section>
 
-<section class="section" id="learning">
-  <div class="container">
-    <div class="section-head">
-      <div>
-        <h2 data-fa="مسیرهای یادگیری" data-en="Learning paths">مسیرهای یادگیری</h2>
-        <p data-fa="یک مسیر انتخاب کن و اولین قدم را بردار." data-en="Choose a path and take your first step.">یک مسیر انتخاب کن و اولین قدم را بردار.</p>
+<section class="section" id="profile">
+<div class="container">
+  <div class="section-head">
+    <div><h2 data-fa="پروفایل بازیکن" data-en="PLAYER PROFILE">پروفایل بازیکن</h2><p data-fa="XP جمع کن، سطح خودت را بالا ببر و دستاوردها را باز کن." data-en="Earn XP, level up, and unlock achievements.">XP جمع کن، سطح خودت را بالا ببر و دستاوردها را باز کن.</p></div>
+    <span class="badge" data-fa="ذخیره‌ی محلی" data-en="LOCAL SAVE">ذخیره‌ی محلی</span>
+  </div>
+
+  <div class="leader-layout">
+    <div class="profile">
+      <div class="profile-top">
+        <div class="profile-avatar">G</div>
+        <div><h3>Gamer</h3><div class="muted small" data-fa="بازیکن GAMFICATION" data-en="GAMFICATION player">بازیکن GAMFICATION</div></div>
       </div>
+      <hr style="border-color:#ffffff15">
+      <div style="display:flex;align-items:end;justify-content:space-between;gap:10px">
+        <div><div class="muted small" data-fa="سطح فعلی" data-en="Current level">سطح فعلی</div><div class="level-number" id="profileLevel">1</div></div>
+        <div style="text-align:end"><strong id="profileXP">0 XP</strong><div class="muted small" id="nextLevel">0 / 100 XP</div></div>
+      </div>
+      <div class="xpbar"><span id="xpProgress"></span></div>
+      <div class="muted small" data-fa="با تکمیل بازی‌ها و چالش‌ها XP بیشتری بگیر." data-en="Complete games and challenges to earn more XP.">با تکمیل بازی‌ها و چالش‌ها XP بیشتری بگیر.</div>
+      <div class="statline">
+        <div class="stat"><strong id="gamesPlayed">0</strong><span data-fa="بازی‌های تکمیل‌شده" data-en="Games completed">بازی‌های تکمیل‌شده</span></div>
+        <div class="stat"><strong id="achCount">0/5</strong><span data-fa="دستاوردها" data-en="Achievements">دستاوردها</span></div>
+      </div>
+      <button class="btn btn-sm" id="resetAll" style="margin-top:16px" data-fa="پاک‌کردن تمام پیشرفت‌ها" data-en="Reset all progress">پاک‌کردن تمام پیشرفت‌ها</button>
     </div>
 
-    <div class="grid grid-3">
-      <article class="card featured">
-        <div class="course-top"><div class="course-symbol">💻</div><span class="pill">01</span></div>
-        <h3 data-fa="طراحی وب" data-en="Web development">طراحی وب</h3>
-        <p data-fa="از ساخت اولین صفحه تا آشنایی با HTML، CSS و JavaScript." data-en="From your first webpage to HTML, CSS, and JavaScript fundamentals.">از ساخت اولین صفحه تا آشنایی با HTML، CSS و JavaScript.</p>
-        <div class="course-meta"><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span></div>
-        <div class="course-progress"><div style="display:flex;justify-content:space-between;font-size:12px"><span data-fa="مسیر پیشنهادی" data-en="Suggested path">مسیر پیشنهادی</span><span>Beginner</span></div><div class="progress"><span style="width:20%"></span></div></div>
-        <button class="btn btn-primary btn-sm course-add" style="margin-top:17px" data-course="web" data-fa="افزودن به برنامه" data-en="Add to my plan">افزودن به برنامه</button>
-      </article>
-
-      <article class="card">
-        <div class="course-top"><div class="course-symbol">🤖</div><span class="tag">02</span></div>
-        <h3 data-fa="هوش مصنوعی" data-en="Artificial intelligence">هوش مصنوعی</h3>
-        <p data-fa="آشنایی با مدل‌های هوشمند، پرامپت‌نویسی و کاربردهای مسئولانه‌ی AI." data-en="Explore AI models, prompt writing, and responsible AI applications.">آشنایی با مدل‌های هوشمند، پرامپت‌نویسی و کاربردهای مسئولانه‌ی AI.</p>
-        <div class="course-meta"><span class="tag">AI</span><span class="tag">Prompts</span><span class="tag">Projects</span></div>
-        <div class="course-progress"><div style="display:flex;justify-content:space-between;font-size:12px"><span data-fa="مسیر پیشنهادی" data-en="Suggested path">مسیر پیشنهادی</span><span>Beginner</span></div><div class="progress"><span style="width:12%"></span></div></div>
-        <button class="btn btn-secondary btn-sm course-add" style="margin-top:17px" data-course="ai" data-fa="افزودن به برنامه" data-en="Add to my plan">افزودن به برنامه</button>
-      </article>
-
-      <article class="card">
-        <div class="course-top"><div class="course-symbol">📈</div><span class="tag">03</span></div>
-        <h3 data-fa="مدیریت زمان" data-en="Time management">مدیریت زمان</h3>
-        <p data-fa="اولویت‌بندی کارها، ساخت عادت‌های پایدار و برنامه‌ریزی روزانه." data-en="Prioritize tasks, build lasting habits, and plan your day.">اولویت‌بندی کارها، ساخت عادت‌های پایدار و برنامه‌ریزی روزانه.</p>
-        <div class="course-meta"><span class="tag">Habits</span><span class="tag">Focus</span><span class="tag">Planning</span></div>
-        <div class="course-progress"><div style="display:flex;justify-content:space-between;font-size:12px"><span data-fa="مسیر پیشنهادی" data-en="Suggested path">مسیر پیشنهادی</span><span>Beginner</span></div><div class="progress"><span style="width:10%"></span></div></div>
-        <button class="btn btn-secondary btn-sm course-add" style="margin-top:17px" data-course="time" data-fa="افزودن به برنامه" data-en="Add to my plan">افزودن به برنامه</button>
-      </article>
-
-      <article class="card">
-        <div class="course-top"><div class="course-symbol">🎨</div><span class="tag">04</span></div>
-        <h3 data-fa="طراحی و خلاقیت" data-en="Design and creativity">طراحی و خلاقیت</h3>
-        <p data-fa="اصول طراحی بصری، ترکیب رنگ، تایپوگرافی و تجربه‌ی کاربری." data-en="Learn visual design, color, typography, and user experience.">اصول طراحی بصری، ترکیب رنگ، تایپوگرافی و تجربه‌ی کاربری.</p>
-        <div class="course-meta"><span class="tag">UI</span><span class="tag">UX</span><span class="tag">Visuals</span></div>
-        <button class="btn btn-secondary btn-sm course-add" style="margin-top:17px" data-course="design" data-fa="افزودن به برنامه" data-en="Add to my plan">افزودن به برنامه</button>
-      </article>
-
-      <article class="card">
-        <div class="course-top"><div class="course-symbol">🧠</div><span class="tag">05</span></div>
-        <h3 data-fa="تفکر نقادانه" data-en="Critical thinking">تفکر نقادانه</h3>
-        <p data-fa="بررسی شواهد، حل مسئله و تشخیص ادعاهای قابل اعتماد." data-en="Evaluate evidence, solve problems, and assess reliable claims.">بررسی شواهد، حل مسئله و تشخیص ادعاهای قابل اعتماد.</p>
-        <div class="course-meta"><span class="tag">Logic</span><span class="tag">Research</span></div>
-        <button class="btn btn-secondary btn-sm course-add" style="margin-top:17px" data-course="thinking" data-fa="افزودن به برنامه" data-en="Add to my plan">افزودن به برنامه</button>
-      </article>
-
-      <article class="card">
-        <div class="course-top"><div class="course-symbol">🚀</div><span class="tag">06</span></div>
-        <h3 data-fa="ساخت پروژه" data-en="Project building">ساخت پروژه</h3>
-        <p data-fa="از انتخاب مسئله تا طراحی، پیاده‌سازی و انتشار یک محصول کوچک." data-en="Go from identifying a problem to building and publishing a small product.">از انتخاب مسئله تا طراحی، پیاده‌سازی و انتشار یک محصول کوچک.</p>
-        <div class="course-meta"><span class="tag">Build</span><span class="tag">Launch</span></div>
-        <button class="btn btn-secondary btn-sm course-add" style="margin-top:17px" data-course="project" data-fa="افزودن به برنامه" data-en="Add to my plan">افزودن به برنامه</button>
-      </article>
+    <div class="panel">
+      <h3 style="margin-top:0" data-fa="🏅 دستاوردها" data-en="🏅 Achievements">🏅 دستاوردها</h3>
+      <div class="achievement-list" id="achievements"></div>
     </div>
   </div>
-</section>
 
-<section class="section" id="tools">
-  <div class="container">
-    <div class="section-head">
-      <div>
-        <h2 data-fa="جعبه‌ابزار LEVELUP" data-en="The LEVELUP toolbox">جعبه‌ابزار LEVELUP</h2>
-        <p data-fa="ابزارهای سبک برای شروع سریع؛ خروجی‌ها در همین مرورگر ساخته می‌شوند." data-en="Lightweight tools to get started. These outputs are generated in your browser.">ابزارهای سبک برای شروع سریع؛ خروجی‌ها در همین مرورگر ساخته می‌شوند.</p>
-      </div>
-    </div>
-
-    <div class="grid grid-2">
-      <div class="panel">
-        <h3>💡 <span data-fa="ایده‌ساز پروژه" data-en="Project idea generator">ایده‌ساز پروژه</span></h3>
-        <p class="muted small" data-fa="موضوع مورد علاقه‌ات را وارد کن تا چند پیشنهاد اولیه دریافت کنی." data-en="Enter an interest to get a few starter ideas.">موضوع مورد علاقه‌ات را وارد کن تا چند پیشنهاد اولیه دریافت کنی.</p>
-        <div class="field">
-          <label for="ideaTopic" data-fa="موضوع یا علاقه" data-en="Topic or interest">موضوع یا علاقه</label>
-          <input id="ideaTopic" maxlength="100" placeholder="مثلاً فوتبال، برنامه‌نویسی، آموزش" data-placeholder-fa="مثلاً فوتبال، برنامه‌نویسی، آموزش" data-placeholder-en="e.g. football, coding, education">
-        </div>
-        <button class="btn btn-primary" id="ideaBtn" type="button" data-fa="✨ ساخت پیشنهاد" data-en="✨ Generate ideas">✨ ساخت پیشنهاد</button>
-        <div class="tool-output" id="ideaOutput" style="margin-top:14px" aria-live="polite">پیشنهادهای تو اینجا نمایش داده می‌شوند.</div>
-        <button class="btn btn-secondary btn-sm" id="copyIdea" type="button" style="margin-top:10px" data-fa="کپی خروجی" data-en="Copy output">کپی خروجی</button>
-      </div>
-
-      <div class="panel">
-        <h3>🗓️ <span data-fa="برنامه‌ریز روزانه" data-en="Daily planner">برنامه‌ریز روزانه</span></h3>
-        <p class="muted small" data-fa="سه اولویت روزت را وارد کن و یک برنامه‌ی ساده بساز." data-en="Enter three priorities to create a simple daily plan.">سه اولویت روزت را وارد کن و یک برنامه‌ی ساده بساز.</p>
-        <div class="field"><label for="priority1" data-fa="اولویت اول" data-en="Priority one">اولویت اول</label><input id="priority1" maxlength="120"></div>
-        <div class="field"><label for="priority2" data-fa="اولویت دوم" data-en="Priority two">اولویت دوم</label><input id="priority2" maxlength="120"></div>
-        <div class="field"><label for="priority3" data-fa="اولویت سوم" data-en="Priority three">اولویت سوم</label><input id="priority3" maxlength="120"></div>
-        <button class="btn btn-primary" id="planBtn" type="button" data-fa="ساخت برنامه" data-en="Build my plan">ساخت برنامه</button>
-        <div class="tool-output" id="planOutput" style="margin-top:14px" aria-live="polite">برنامه‌ی روزانه‌ی تو اینجا نمایش داده می‌شود.</div>
-        <button class="btn btn-secondary btn-sm" id="copyPlan" type="button" style="margin-top:10px" data-fa="کپی برنامه" data-en="Copy plan">کپی برنامه</button>
-      </div>
-
-      <div class="panel">
-        <h3>🔢 <span data-fa="شمارشگر متن" data-en="Text counter">شمارشگر متن</span></h3>
-        <div class="field">
-          <label for="counterInput" data-fa="متنت را وارد کن" data-en="Enter your text">متنت را وارد کن</label>
-          <textarea id="counterInput" maxlength="50000" placeholder="متن را اینجا بنویس..." data-placeholder-fa="متن را اینجا بنویس..." data-placeholder-en="Write your text here..."></textarea>
-        </div>
-        <div class="stats-row">
-          <div class="stat-box"><strong id="wordCount">۰</strong><span data-fa="واژه" data-en="Words">واژه</span></div>
-          <div class="stat-box"><strong id="charCount">۰</strong><span data-fa="نویسه" data-en="Characters">نویسه</span></div>
-          <div class="stat-box"><strong id="readTime">۰</strong><span data-fa="دقیقه خواندن" data-en="Reading minutes">دقیقه خواندن</span></div>
-        </div>
-      </div>
-
-      <div class="panel">
-        <h3>🤖 <span data-fa="آزمایشگاه هوش مصنوعی" data-en="AI assistant">آزمایشگاه هوش مصنوعی</span></h3>
-        <p class="muted small" data-fa="این بخش برای اتصال به یک مدل واقعی آماده شده است؛ فعلاً درخواست آنلاین ارسال نمی‌کند." data-en="This area is prepared for a real model integration, but it does not send online requests yet.">این بخش برای اتصال به یک مدل واقعی آماده شده است؛ فعلاً درخواست آنلاین ارسال نمی‌کند.</p>
-        <div class="field">
-          <label for="aiPrompt" data-fa="چه کمکی نیاز داری؟" data-en="What do you need help with?">چه کمکی نیاز داری؟</label>
-          <textarea id="aiPrompt" maxlength="4000" placeholder="سوال یا درخواستت را بنویس..." data-placeholder-fa="سوال یا درخواستت را بنویس..." data-placeholder-en="Write your question or request..."></textarea>
-        </div>
-        <button class="btn btn-primary" id="aiBtn" type="button" data-fa="آماده‌سازی درخواست" data-en="Prepare request">آماده‌سازی درخواست</button>
-        <div class="tool-output" id="aiOutput" style="margin-top:14px" aria-live="polite" data-fa="پس از راه‌اندازی بک‌اند امن، پاسخ واقعی هوش مصنوعی در این بخش نمایش داده خواهد شد." data-en="After the secure backend is configured, real AI responses can appear here.">پس از راه‌اندازی بک‌اند امن، پاسخ واقعی هوش مصنوعی در این بخش نمایش داده خواهد شد.</div>
-        <div class="notice" style="margin-top:13px" data-fa="امنیت: کلید API را هرگز در این فایل، کد JavaScript مرورگر یا مخزن عمومی GitHub قرار نده. درخواست‌ها باید از یک بک‌اند امن عبور کنند." data-en="Security: Never put an API key in this file, browser JavaScript, or a public GitHub repository. Requests must go through a secure backend.">امنیت: کلید API را هرگز در این فایل، کد JavaScript مرورگر یا مخزن عمومی GitHub قرار نده. درخواست‌ها باید از یک بک‌اند امن عبور کنند.</div>
-      </div>
-    </div>
+  <div class="note" style="margin-top:16px">
+    <strong data-fa="نکته درباره‌ی امتیازها:" data-en="About scores:">نکته درباره‌ی امتیازها:</strong>
+    <span data-fa="XP، رکوردها و دستاوردها در حافظه‌ی محلی مرورگر ذخیره می‌شوند. پاک‌کردن داده‌های مرورگر ممکن است آن‌ها را حذف کند. این نسخه حساب آنلاین یا جدول رتبه‌بندی مشترک ندارد." data-en="XP, records, and achievements are saved in this browser. Clearing browser data may erase them. This version has no online accounts or shared leaderboard.">XP، رکوردها و دستاوردها در حافظه‌ی محلی مرورگر ذخیره می‌شوند. پاک‌کردن داده‌های مرورگر ممکن است آن‌ها را حذف کند. این نسخه حساب آنلاین یا جدول رتبه‌بندی مشترک ندارد.</span>
   </div>
-</section>
-
-<section class="section" id="about">
-  <div class="container">
-    <div class="section-head">
-      <div>
-        <h2 data-fa="درباره‌ی LEVELUP" data-en="About LEVELUP">درباره‌ی LEVELUP</h2>
-        <p data-fa="پروژه‌ای برای یادگیری، خلاقیت و تبدیل ایده به عمل." data-en="A project for learning, creativity, and turning ideas into action.">پروژه‌ای برای یادگیری، خلاقیت و تبدیل ایده به عمل.</p>
-      </div>
-    </div>
-    <div class="grid grid-2">
-      <div class="card">
-        <div class="card-icon">🌌</div>
-        <h3 data-fa="چشم‌انداز ما" data-en="Our vision">چشم‌انداز ما</h3>
-        <p data-fa="LEVELUP با این ایده ساخته شده که رشد لازم نیست پیچیده باشد. با ابزارهای ساده، هدف‌های روشن و قدم‌های کوچک می‌توان یک ایده را به پروژه‌ای واقعی تبدیل کرد." data-en="LEVELUP is built around a simple idea: growth doesn't need to be complicated. Clear goals, small steps, and useful tools can turn ideas into real projects.">LEVELUP با این ایده ساخته شده که رشد لازم نیست پیچیده باشد. با ابزارهای ساده، هدف‌های روشن و قدم‌های کوچک می‌توان یک ایده را به پروژه‌ای واقعی تبدیل کرد.</p>
-      </div>
-      <div class="card">
-        <div class="card-icon">🔐</div>
-        <h3 data-fa="شفافیت و حریم خصوصی" data-en="Transparency and privacy">شفافیت و حریم خصوصی</h3>
-        <p data-fa="کارها و یادداشت‌های این نسخه در حافظه‌ی محلی مرورگر ذخیره می‌شوند. این یعنی ممکن است با پاک‌کردن داده‌های مرورگر از بین بروند و به‌صورت خودکار بین دستگاه‌ها همگام نمی‌شوند." data-en="Tasks and notes in this version are stored locally in your browser. They may be lost if browser data is cleared and are not automatically synced across devices.">کارها و یادداشت‌های این نسخه در حافظه‌ی محلی مرورگر ذخیره می‌شوند. این یعنی ممکن است با پاک‌کردن داده‌های مرورگر از بین بروند و به‌صورت خودکار بین دستگاه‌ها همگام نمی‌شوند.</p>
-      </div>
-    </div>
-    <div class="notice" style="margin-top:18px">
-      <strong data-fa="وضعیت نسخه:" data-en="Version status:">وضعیت نسخه:</strong>
-      <span data-fa="این نسخه یک وب‌سایت سمت مرورگر است. برای حساب کاربری آنلاین، همگام‌سازی ابری و پاسخ واقعی هوش مصنوعی باید سرویس‌های بک‌اند جداگانه راه‌اندازی شوند." data-en="This version is a browser-based website. Online accounts, cloud sync, and real AI responses require separate backend services.">این نسخه یک وب‌سایت سمت مرورگر است. برای حساب کاربری آنلاین، همگام‌سازی ابری و پاسخ واقعی هوش مصنوعی باید سرویس‌های بک‌اند جداگانه راه‌اندازی شوند.</span>
-    </div>
-  </div>
+</div>
 </section>
 </main>
 
 <footer class="footer">
-  <div class="container footer-inner">
-    <a href="#home" class="brand"><span class="brand-logo">L+</span><span>LEVEL<span class="gradient-text">UP</span></span></a>
-    <p data-fa="یاد بگیر. بساز. رشد کن. © LEVELUP" data-en="Learn. Build. Grow. © LEVELUP">یاد بگیر. بساز. رشد کن. © LEVELUP</p>
-    <a href="#home" class="btn btn-secondary btn-sm" data-fa="بازگشت به بالا ↑" data-en="Back to top ↑">بازگشت به بالا ↑</a>
-  </div>
+<div class="container footer-inner">
+  <a href="#home" class="brand"><span class="brand-icon">G</span><span>GAM<span class="gradient">FICATION</span></span></a>
+  <p>PLAY • LEVEL UP • CONQUER</p>
+  <span class="muted small">© GAMFICATION</span>
+</div>
 </footer>
-
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
 <script>
 "use strict";
+const $ = s => document.querySelector(s);
+const $$ = s => [...document.querySelectorAll(s)];
+const SAVE_KEY = "gamfication-save-v1";
 
-/* LEVELUP
-   Browser-only functionality.
-   No API keys, remote AI calls, or server-side accounts are included.
-*/
-
-const $ = (selector) => document.querySelector(selector);
-const $$ = (selector) => Array.from(document.querySelectorAll(selector));
-
-const STORAGE_KEY = "levelup.v1";
-const defaultState = {
-  tasks: [],
-  notes: "",
-  theme: "dark",
-  language: "fa",
-  focusSessions: 0,
-  courses: []
+const defaultData = {
+  xp:0, gamesPlayed:0, reactionBest:null, clickBest:0,
+  memoryBest:null, guessBest:null, tttWins:0, tttLosses:0,
+  language:"fa", achievements:[]
 };
 
-let state = loadState();
+let data;
+try{
+  data={...defaultData,...JSON.parse(localStorage.getItem(SAVE_KEY)||"{}")};
+  if(!Array.isArray(data.achievements)) data.achievements=[];
+}catch{data={...defaultData};}
 
-function loadState() {
-  try {
-    const saved = JSON.parse(localStorage.getItem(STORAGE_KEY) || "{}");
-    return {
-      ...defaultState,
-      ...saved,
-      tasks: Array.isArray(saved.tasks) ? saved.tasks : [],
-      courses: Array.isArray(saved.courses) ? saved.courses : []
-    };
-  } catch {
-    return { ...defaultState };
+function save(){
+  try{localStorage.setItem(SAVE_KEY,JSON.stringify(data));}
+  catch{toast(txt("ذخیره‌سازی ممکن نیست. فضای مرورگر را بررسی کن.","Unable to save. Check browser storage."));}
+}
+function txt(fa,en){return data.language==="fa"?fa:en;}
+function num(n){return Number(n).toLocaleString(data.language==="fa"?"fa-IR":"en-US");}
+let toastTimer;
+function toast(message){
+  const el=$("#toast");el.textContent=message;el.classList.add("show");
+  clearTimeout(toastTimer);toastTimer=setTimeout(()=>el.classList.remove("show"),2400);
+}
+function level(){return Math.floor(data.xp/100)+1;}
+function xpInLevel(){return data.xp%100;}
+
+function renderProfile(){
+  $("#navXP").textContent=num(data.xp);
+  $("#heroXP").textContent=num(data.xp);
+  $("#heroLevel").textContent=num(level());
+  $("#profileLevel").textContent=num(level());
+  $("#profileXP").textContent=num(data.xp)+" XP";
+  $("#nextLevel").textContent=num(xpInLevel())+" / 100 XP";
+  $("#xpProgress").style.width=xpInLevel()+"%";
+  $("#gamesPlayed").textContent=num(data.gamesPlayed);
+  renderAchievements();
+}
+
+const achievementDefs=[
+  {id:"first",icon:"🎮",fa:"اولین بازی",en:"First Game",descFa:"یک بازی را کامل کن",descEn:"Complete a game",test:()=>data.gamesPlayed>=1},
+  {id:"xp100",icon:"⚡",fa:"صد امتیازی",en:"Century XP",descFa:"۱۰۰ XP جمع کن",descEn:"Earn 100 XP",test:()=>data.xp>=100},
+  {id:"xp500",icon:"🔥",fa:"بازیکن جدی",en:"Serious Gamer",descFa:"۵۰۰ XP جمع کن",descEn:"Earn 500 XP",test:()=>data.xp>=500},
+  {id:"three",icon:"🏆",fa:"سه بازی",en:"Triple Play",descFa:"سه بازی را کامل کن",descEn:"Complete 3 games",test:()=>data.gamesPlayed>=3},
+  {id:"level5",icon:"👑",fa:"نخبه‌ی بازی",en:"Elite Gamer",descFa:"به سطح ۵ برس",descEn:"Reach level 5",test:()=>level()>=5}
+];
+function renderAchievements(){
+  const host=$("#achievements");host.replaceChildren();
+  let unlocked=0;
+  achievementDefs.forEach(a=>{
+    const open=data.achievements.includes(a.id)||a.test();
+    if(open)unlocked++;
+    const el=document.createElement("div");el.className="achievement"+(open?"":" locked");
+    const icon=document.createElement("span");icon.className="achievement-icon";icon.textContent=open?a.icon:"🔒";
+    const info=document.createElement("div");
+    const title=document.createElement("strong");title.textContent=data.language==="fa"?a.fa:a.en;
+    const desc=document.createElement("small");desc.textContent=data.language==="fa"?a.descFa:a.descEn;
+    info.append(title,desc);el.append(icon,info);host.append(el);
+    if(open&&!data.achievements.includes(a.id))data.achievements.push(a.id);
+  });
+  $("#achCount").textContent=unlocked+"/5";
+}
+function awardXP(amount,gameName){
+  data.xp+=amount;data.gamesPlayed++;
+  const before=[...data.achievements];
+  achievementDefs.forEach(a=>{if(a.test()&&!data.achievements.includes(a.id))data.achievements.push(a.id);});
+  save();renderProfile();
+  toast(txt("+"+amount+" XP برای "+gameName+"!","+"+amount+" XP for "+gameName+"!"));
+  if(data.achievements.length>before.length){
+    setTimeout(()=>toast(txt("🏅 دستاورد جدید باز شد!","🏅 Achievement unlocked!")),500);
   }
 }
-
-function saveState() {
-  try {
-    localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
-  } catch {
-    showToast(currentText(
-      "ذخیره‌سازی ممکن نشد؛ فضای مرورگر را بررسی کن.",
-      "Could not save data. Check browser storage."
-    ));
-  }
-}
-
-function currentText(fa, en) {
-  return state.language === "fa" ? fa : en;
-}
-
-let toastTimeout;
-function showToast(message) {
-  const toast = $("#toast");
-  toast.textContent = message;
-  toast.classList.add("show");
-  clearTimeout(toastTimeout);
-  toastTimeout = setTimeout(() => toast.classList.remove("show"), 2600);
-}
-
-/* Theme */
-function applyTheme() {
-  document.body.classList.toggle("light", state.theme === "light");
-  $("#themeBtn").textContent = state.theme === "dark" ? "☀️" : "🌙";
-  document.querySelector('meta[name="theme-color"]').content =
-    state.theme === "dark" ? "#0b0b14" : "#f5f5fb";
-}
-
-$("#themeBtn").addEventListener("click", () => {
-  state.theme = state.theme === "dark" ? "light" : "dark";
-  saveState();
-  applyTheme();
-});
 
 /* Language */
-function applyLanguage() {
-  const isEnglish = state.language === "en";
-  document.documentElement.lang = state.language;
-  document.documentElement.dir = isEnglish ? "ltr" : "rtl";
-  document.body.classList.toggle("en", isEnglish);
-  $("#languageBtn").textContent = isEnglish ? "فا" : "EN";
-
-  $$("[data-fa][data-en]").forEach((element) => {
-    const value = element.dataset[state.language];
-    if (value !== undefined) element.textContent = value;
-  });
-
-  $$("[data-placeholder-fa][data-placeholder-en]").forEach((element) => {
-    element.placeholder = element.dataset[
-      isEnglish ? "placeholderEn" : "placeholderFa"
-    ];
-  });
-
-  $("#timerDisplay").textContent = formatTime(timerRemaining);
-  $("#timerStatus").textContent = timerRunning
-    ? currentText("در حال تمرکز", "Focusing")
-    : currentText("آماده‌ی شروع", "Ready to begin");
-
-  renderTasks();
-  renderStats();
-  renderCourseButtons();
+function applyLanguage(){
+  const en=data.language==="en";
+  document.documentElement.lang=data.language;
+  document.documentElement.dir=en?"ltr":"rtl";
+  document.body.classList.toggle("en",en);
+  $("#langBtn").textContent=en?"فا":"EN";
+  $$("[data-fa][data-en]").forEach(el=>{el.textContent=el.dataset[en?"en":"fa"];});
+  $("#navlinks").classList.remove("open");
+  renderProfile();
+  renderReactionLabels();
+  renderClickerLabels();
+  renderMemoryLabels();
+  renderGuessLabels();
+  renderTtt();
 }
-
-$("#languageBtn").addEventListener("click", () => {
-  state.language = state.language === "fa" ? "en" : "fa";
-  saveState();
-  applyLanguage();
+$("#langBtn").addEventListener("click",()=>{
+  data.language=data.language==="fa"?"en":"fa";save();applyLanguage();
 });
+$("#mobileBtn").addEventListener("click",()=>$("#navlinks").classList.toggle("open"));
+$$(".navlinks a").forEach(a=>a.addEventListener("click",()=>$("#navlinks").classList.remove("open")));
 
-/* Mobile navigation */
-$("#menuBtn").addEventListener("click", () => {
-  $("#navLinks").classList.toggle("open");
-});
-
-$$(".nav-links a").forEach((link) => {
-  link.addEventListener("click", () => {
-    $("#navLinks").classList.remove("open");
-    $$(".nav-links a").forEach((item) => item.classList.remove("active"));
-    link.classList.add("active");
-  });
-});
-
-/* Tasks */
-function safeCategory(category) {
-  const map = {
-    study: ["یادگیری", "Learning"],
-    project: ["پروژه", "Project"],
-    personal: ["شخصی", "Personal"]
+/* Game selection */
+function openGame(name){
+  $$(".game-panel").forEach(p=>p.classList.remove("active"));
+  $("#noGame").classList.add("hidden");
+  $("#game-"+name).classList.add("active");
+  const labels={
+    reaction:["تست واکنش","REACTION TEST"],clicker:["کلیکر سرعتی","SPEED CLICKER"],
+    memory:["چالش حافظه","MEMORY MATCH"],guess:["حدس عدد","NUMBER GUESS"],ttt:["دوز","TIC-TAC-TOE"]
   };
-  return (map[category] || map.personal)[state.language === "fa" ? 0 : 1];
+  $("#currentGameBadge").textContent=labels[name][data.language==="fa"?0:1];
+  $("#arena").scrollIntoView({behavior:"smooth",block:"start"});
 }
+$$(".open-game").forEach(b=>b.addEventListener("click",()=>openGame(b.dataset.game)));
 
-function renderTasks() {
-  const list = $("#taskList");
-  list.replaceChildren();
-
-  if (state.tasks.length === 0) {
-    const empty = document.createElement("div");
-    empty.className = "empty";
-    empty.textContent = currentText(
-      "هنوز کاری اضافه نکرده‌ای. اولین قدم را بردار!",
-      "No tasks yet. Add your first task!"
-    );
-    list.appendChild(empty);
+/* Reaction test */
+let reactionState="idle",reactionTimer=null,reactionStarted=0,reactionDelay=0;
+const reactionPad=$("#reactionPad");
+function renderReactionLabels(){
+  if(reactionState==="idle"){
+    reactionPad.textContent=txt("برای شروع کلیک کن","Click to start");
+    reactionPad.className="reaction-pad";
+  }else if(reactionState==="waiting"){
+    reactionPad.textContent=txt("صبر کن...","Wait...");
+    reactionPad.className="reaction-pad waiting";
+  }else if(reactionState==="ready"){
+    reactionPad.textContent=txt("الان کلیک کن!","CLICK NOW!");
+    reactionPad.className="reaction-pad ready";
+  }else{
+    reactionPad.textContent=txt("دوباره تلاش کن","Try again");
+    reactionPad.className="reaction-pad tooearly";
   }
-
-  state.tasks.forEach((task) => {
-    const row = document.createElement("div");
-    row.className = "task" + (task.done ? " done" : "");
-
-    const checkbox = document.createElement("input");
-    checkbox.type = "checkbox";
-    checkbox.checked = Boolean(task.done);
-    checkbox.setAttribute("aria-label", currentText("تغییر وضعیت کار", "Toggle task"));
-    checkbox.addEventListener("change", () => {
-      task.done = checkbox.checked;
-      saveState();
-      renderTasks();
-      renderStats();
-    });
-
-    const textWrap = document.createElement("div");
-    textWrap.className = "task-text";
-
-    const title = document.createElement("div");
-    title.textContent = task.title;
-
-    const meta = document.createElement("small");
-    meta.textContent =
-      safeCategory(task.category) + " · " +
-      (task.priority === "high"
-        ? currentText("اولویت زیاد", "High priority")
-        : currentText("اولویت معمولی", "Normal priority"));
-
-    textWrap.append(title, meta);
-
-    const remove = document.createElement("button");
-    remove.type = "button";
-    remove.className = "icon-btn";
-    remove.textContent = "×";
-    remove.setAttribute("aria-label", currentText("حذف کار", "Delete task"));
-    remove.addEventListener("click", () => {
-      state.tasks = state.tasks.filter((item) => item.id !== task.id);
-      saveState();
-      renderTasks();
-      renderStats();
-    });
-
-    row.append(checkbox, textWrap, remove);
-    list.appendChild(row);
-  });
 }
-
-function renderStats() {
-  const total = state.tasks.length;
-  const done = state.tasks.filter((task) => task.done).length;
-  const percent = total ? Math.round(done / total * 100) : 0;
-
-  $("#taskTotal").textContent = localNumber(total);
-  $("#taskDone").textContent = localNumber(done);
-  $("#taskPercent").textContent = localNumber(percent) + "%";
-  $("#heroTaskCount").textContent = localNumber(done) + "/" + localNumber(total);
-  $("#heroTaskProgress").style.width = percent + "%";
-  $("#focusSessions").textContent = localNumber(state.focusSessions);
-  $("#heroFocusCount").textContent = localNumber(state.focusSessions);
+function startReaction(){
+  clearTimeout(reactionTimer);reactionState="waiting";renderReactionLabels();
+  $("#reactionMessage").textContent=txt("منتظر سبزشدن صفحه بمان...","Wait for green...");
+  $("#reactionResult").textContent="—";
+  reactionDelay=1000+Math.random()*3000;
+  reactionTimer=setTimeout(()=>{
+    reactionState="ready";reactionStarted=performance.now();
+    renderReactionLabels();
+    $("#reactionMessage").textContent=txt("همین الان!","NOW!");
+  },reactionDelay);
 }
-
-function localNumber(value) {
-  return Number(value).toLocaleString(
-    state.language === "fa" ? "fa-IR" : "en-US"
-  );
-}
-
-$("#taskForm").addEventListener("submit", (event) => {
-  event.preventDefault();
-  const input = $("#taskInput");
-  const title = input.value.trim();
-  if (!title) return;
-
-  state.tasks.unshift({
-    id: Date.now().toString(36) + Math.random().toString(36).slice(2, 7),
-    title,
-    category: $("#taskCategory").value,
-    priority: $("#taskPriority").value,
-    done: false
-  });
-
-  saveState();
-  renderTasks();
-  renderStats();
-  input.value = "";
-  input.focus();
-  showToast(currentText("کار جدید اضافه شد.", "Task added."));
-});
-
-$("#clearDoneBtn").addEventListener("click", () => {
-  const completed = state.tasks.filter((task) => task.done).length;
-  if (!completed) {
-    showToast(currentText("کار انجام‌شده‌ای وجود ندارد.", "No completed tasks to remove."));
+$("#reactionStart").addEventListener("click",startReaction);
+reactionPad.addEventListener("click",()=>{
+  if(reactionState==="idle"||reactionState==="done"||reactionState==="early"){
+    startReaction();return;
+  }
+  if(reactionState==="waiting"){
+    clearTimeout(reactionTimer);reactionState="early";renderReactionLabels();
+    $("#reactionMessage").textContent=txt("زود کلیک کردی! دوباره شروع کن.","Too early! Start another round.");
     return;
   }
-  state.tasks = state.tasks.filter((task) => !task.done);
-  saveState();
-  renderTasks();
-  renderStats();
-  showToast(currentText("کارهای انجام‌شده حذف شدند.", "Completed tasks removed."));
-});
-
-/* Focus timer */
-let timerDuration = 25 * 60;
-let timerRemaining = timerDuration;
-let timerRunning = false;
-let timerInterval = null;
-
-function formatTime(seconds) {
-  const minutes = Math.floor(seconds / 60);
-  const remainder = seconds % 60;
-  return String(minutes).padStart(2, "0") + ":" +
-         String(remainder).padStart(2, "0");
-}
-
-function updateTimer() {
-  $("#timerDisplay").textContent = formatTime(timerRemaining);
-  const elapsed = timerDuration ? 1 - timerRemaining / timerDuration : 0;
-  $("#timerRing").style.setProperty("--timer-progress", (elapsed * 100) + "%");
-  $("#timerStart").textContent = timerRunning
-    ? currentText("توقف موقت", "Pause")
-    : currentText("شروع", "Start");
-  $("#timerStatus").textContent = timerRunning
-    ? currentText("در حال تمرکز", "Focusing")
-    : currentText("آماده‌ی شروع", "Ready to begin");
-}
-
-function stopTimer() {
-  if (timerInterval) clearInterval(timerInterval);
-  timerInterval = null;
-  timerRunning = false;
-  updateTimer();
-}
-
-function selectTimer(minutes) {
-  stopTimer();
-  timerDuration = minutes * 60;
-  timerRemaining = timerDuration;
-  updateTimer();
-}
-
-$$("[data-minutes]").forEach((button) => {
-  button.addEventListener("click", () => {
-    selectTimer(Number(button.dataset.minutes));
-  });
-});
-
-$("#timerStart").addEventListener("click", () => {
-  if (timerRunning) {
-    stopTimer();
-    return;
+  const ms=Math.round(performance.now()-reactionStarted);
+  reactionState="done";renderReactionLabels();
+  $("#reactionResult").textContent=ms+" ms";
+  $("#reactionMessage").textContent=txt("عالی! برای یک دور دیگر شروع کن.","Nice! Start another round.");
+  if(data.reactionBest===null||ms<data.reactionBest){
+    data.reactionBest=ms;
+    $("#reactionBest").textContent=ms+" ms";
+    save();
   }
+  awardXP(ms<250?30:ms<400?20:10,"Reaction Test");
+});
+function renderReactionLabels(){
+  $("#reactionBest").textContent=data.reactionBest===null?"—":data.reactionBest+" ms";
+  if(reactionState==="idle")reactionPad.textContent=txt("برای شروع کلیک کن","Click to start");
+  if(reactionState==="waiting")reactionPad.textContent=txt("صبر کن...","Wait...");
+  if(reactionState==="ready")reactionPad.textContent=txt("الان کلیک کن!","CLICK NOW!");
+  if(reactionState==="early"||reactionState==="done")reactionPad.textContent=txt("برای دور جدید کلیک کن","Click for another round");
+  reactionPad.className="reaction-pad "+(reactionState==="waiting"?"waiting":reactionState==="ready"?"ready":reactionState==="early"?"tooearly":"");
+}
 
-  if (timerRemaining <= 0) selectTimer(25);
+/* Speed clicker */
+let clickCount=0,clickRemaining=10,clickRunning=false,clickInterval=null;
+function renderClickerLabels(){
+  $("#clickBest").textContent=num(data.clickBest);
+  $("#clickCount").textContent=num(clickCount);
+  $("#clickTime").textContent=clickRemaining;
+  $("#clickerStart").textContent=clickRunning?txt("در حال بازی...","Running..."):txt("شروع بازی","Start game");
+}
+function finishClicker(){
+  clearInterval(clickInterval);clickInterval=null;clickRunning=false;
+  $("#clickTarget").disabled=true;
+  $("#clickerMessage").textContent=txt("تمام شد! "+clickCount+" کلیک ثبت کردی.","Time's up! You scored "+clickCount+" clicks.");
+  if(clickCount>data.clickBest){
+    data.clickBest=clickCount;save();
+  }
+  renderClickerLabels();
+  awardXP(Math.min(35,10+clickCount),"Speed Clicker");
+}
+$("#clickerStart").addEventListener("click",()=>{
+  if(clickRunning)return;
+  clearInterval(clickInterval);clickCount=0;clickRemaining=10;clickRunning=true;
+  $("#clickTarget").disabled=false;
+  $("#clickerMessage").textContent=txt("بزن بریم!","Go!");
+  renderClickerLabels();
+  clickInterval=setInterval(()=>{
+    clickRemaining--;renderClickerLabels();
+    if(clickRemaining<=0)finishClicker();
+  },1000);
+});
+$("#clickTarget").addEventListener("click",()=>{
+  if(!clickRunning)return;
+  clickCount++;$("#clickCount").textContent=num(clickCount);
+});
+$("#clickBest").textContent=num(data.clickBest);
 
-  timerRunning = true;
-  updateTimer();
-
-  timerInterval = setInterval(() => {
-    timerRemaining -= 1;
-
-    if (timerRemaining <= 0) {
-      timerRemaining = 0;
-      stopTimer();
-      state.focusSessions += 1;
-      saveState();
-      renderStats();
-      showToast(currentText(
-        "آفرین! جلسه‌ی تمرکزت تمام شد.",
-        "Great work! Your focus session is complete."
-      ));
-      return;
+/* Memory match */
+const memorySymbols=["🍒","⚽","🎮","🚀","🔥","👑"];
+let memoryDeck=[],memoryOpen=[],memoryMatched=[],memoryMoves=0,memoryBusy=false,memoryFinished=false;
+function renderMemoryLabels(){
+  $("#memoryBest").textContent=data.memoryBest===null?"—":num(data.memoryBest);
+  $("#memoryMoves").textContent=num(memoryMoves);
+  $("#memoryPairs").textContent=memoryMatched.length/2+"/6";
+}
+function shuffle(arr){
+  for(let i=arr.length-1;i>0;i--){
+    const j=Math.floor(Math.random()*(i+1));[arr[i],arr[j]]=[arr[j],arr[i]];
+  }return arr;
+}
+function startMemory(){
+  memoryDeck=shuffle([...memorySymbols,...memorySymbols]);
+  memoryOpen=[];memoryMatched=[];memoryMoves=0;memoryBusy=false;memoryFinished=false;
+  $("#memoryMessage").textContent=txt("کارت‌ها را جفت کن!","Match the cards!");
+  renderMemoryBoard();renderMemoryLabels();
+}
+function renderMemoryBoard(){
+  const grid=$("#memoryGrid");grid.replaceChildren();
+  memoryDeck.forEach((symbol,i)=>{
+    const b=document.createElement("button");b.className="memory-card";
+    const shown=memoryOpen.includes(i)||memoryMatched.includes(i);
+    b.textContent=shown?symbol:"?";
+    b.setAttribute("aria-label",shown?symbol:txt("کارت مخفی","Hidden card"));
+    if(shown)b.classList.add("flipped");
+    if(memoryMatched.includes(i)){b.classList.add("matched");b.disabled=true;}
+    else b.disabled=memoryBusy||shown||memoryFinished;
+    b.addEventListener("click",()=>flipMemory(i));
+    grid.append(b);
+  });
+}
+function flipMemory(i){
+  if(memoryBusy||memoryFinished||memoryOpen.includes(i)||memoryMatched.includes(i))return;
+  memoryOpen.push(i);renderMemoryBoard();
+  if(memoryOpen.length===2){
+    memoryMoves++;renderMemoryLabels();
+    const [a,b]=memoryOpen;
+    if(memoryDeck[a]===memoryDeck[b]){
+      memoryMatched.push(a,b);memoryOpen=[];renderMemoryBoard();renderMemoryLabels();
+      if(memoryMatched.length===memoryDeck.length){
+        memoryFinished=true;
+        if(data.memoryBest===null||memoryMoves<data.memoryBest){data.memoryBest=memoryMoves;save();}
+        $("#memoryMessage").textContent=txt("برنده شدی! در "+memoryMoves+" حرکت تمام کردی.","You won in "+memoryMoves+" moves!");
+        renderMemoryLabels();awardXP(Math.max(10,40-memoryMoves),"Memory Match");
+      }
+    }else{
+      memoryBusy=true;
+      setTimeout(()=>{memoryOpen=[];memoryBusy=false;renderMemoryBoard();},700);
     }
-
-    updateTimer();
-  }, 1000);
-});
-
-$("#timerReset").addEventListener("click", () => {
-  selectTimer(Math.round(timerDuration / 60) || 25);
-});
-
-/* Notes */
-$("#notesInput").value = state.notes;
-
-$("#saveNotes").addEventListener("click", () => {
-  state.notes = $("#notesInput").value;
-  saveState();
-  $("#notesStatus").textContent = currentText("ذخیره شد ✓", "Saved ✓");
-  showToast(currentText("یادداشت‌ها ذخیره شدند.", "Notes saved."));
-});
-
-$("#notesInput").addEventListener("input", () => {
-  $("#notesStatus").textContent = currentText("تغییرات ذخیره نشده", "Unsaved changes");
-});
-
-$("#downloadNotes").addEventListener("click", () => {
-  const text = $("#notesInput").value;
-  const blob = new Blob([text], { type: "text/plain;charset=utf-8" });
-  const url = URL.createObjectURL(blob);
-  const link = document.createElement("a");
-  link.href = url;
-  link.download = "levelup-notes.txt";
-  document.body.appendChild(link);
-  link.click();
-  link.remove();
-  URL.revokeObjectURL(url);
-});
-
-/* Course shortcuts */
-const courseNames = {
-  web: ["طراحی وب", "Web development"],
-  ai: ["هوش مصنوعی", "Artificial intelligence"],
-  time: ["مدیریت زمان", "Time management"],
-  design: ["طراحی و خلاقیت", "Design and creativity"],
-  thinking: ["تفکر نقادانه", "Critical thinking"],
-  project: ["ساخت پروژه", "Project building"]
-};
-
-function renderCourseButtons() {
-  $$(".course-add").forEach((button) => {
-    const exists = state.courses.includes(button.dataset.course);
-    button.textContent = exists
-      ? currentText("✓ به برنامه اضافه شده", "✓ Added to plan")
-      : currentText("افزودن به برنامه", "Add to my plan");
-  });
+  }
 }
+$("#memoryStart").addEventListener("click",startMemory);
 
-$$(".course-add").forEach((button) => {
-  button.addEventListener("click", () => {
-    const id = button.dataset.course;
-    if (state.courses.includes(id)) {
-      showToast(currentText("این مسیر قبلاً اضافه شده است.", "This path is already added."));
-      return;
+/* Number guess */
+let secretNumber=0,guessCount=0,guessFinished=false;
+function renderGuessLabels(){
+  $("#guessBest").textContent=data.guessBest===null?"—":num(data.guessBest);
+  $("#guessAttempts").textContent=num(guessCount);
+}
+function resetGuess(){
+  secretNumber=Math.floor(Math.random()*100)+1;
+  guessCount=0;guessFinished=false;$("#guessInput").value="";
+  $("#guessInput").disabled=false;
+  $("#guessMessage").textContent=txt("یک عدد بین ۱ و ۱۰۰ وارد کن.","Enter a number between 1 and 100.");
+  renderGuessLabels();
+}
+$("#guessReset").addEventListener("click",resetGuess);
+$("#guessForm").addEventListener("submit",e=>{
+  e.preventDefault();if(guessFinished)return;
+  const n=Number($("#guessInput").value);
+  if(!Number.isInteger(n)||n<1||n>100){
+    $("#guessMessage").textContent=txt("یک عدد صحیح بین ۱ تا ۱۰۰ وارد کن.","Enter a whole number from 1 to 100.");return;
+  }
+  guessCount++;renderGuessLabels();
+  if(n===secretNumber){
+    guessFinished=true;$("#guessInput").disabled=true;
+    $("#guessMessage").textContent=txt("درست حدس زدی! عدد "+secretNumber+" بود.","Correct! The number was "+secretNumber+".");
+    if(data.guessBest===null||guessCount<data.guessBest){data.guessBest=guessCount;save();}
+    renderGuessLabels();awardXP(Math.max(10,40-guessCount*3),"Number Guess");
+  }else{
+    $("#guessMessage").textContent=n<secretNumber
+      ?txt("عدد مخفی بزرگ‌تر است. دوباره تلاش کن.","The hidden number is higher. Try again.")
+      :txt("عدد مخفی کوچک‌تر است. دوباره تلاش کن.","The hidden number is lower. Try again.");
+  }
+});
+
+/* Tic Tac Toe against a simple computer */
+let board=Array(9).fill(""),tttOver=false,tttBusy=false;
+const wins=[[0,1,2],[3,4,5],[6,7,8],[0,3,6],[1,4,7],[2,5,8],[0,4,8],[2,4,6]];
+function winner(b){
+  for(const line of wins){
+    const [a,c,d]=line;
+    if(b[a]&&b[a]===b[c]&&b[a]===b[d])return b[a];
+  }
+  return b.every(Boolean)?"draw":null;
+}
+function renderTtt(){
+  const host=$("#tttBoard");host.replaceChildren();
+  board.forEach((v,i)=>{
+    const b=document.createElement("button");b.className="ttt-cell "+(v?v.toLowerCase():"");
+    b.textContent=v;b.disabled=Boolean(v)||tttOver||tttBusy;
+    b.setAttribute("aria-label",txt("خانه‌ی "+(i+1),"Cell "+(i+1)));
+    b.addEventListener("click",()=>tttMove(i));host.append(b);
+  });
+  $("#tttWins").textContent=num(data.tttWins);
+  $("#tttLosses").textContent=num(data.tttLosses);
+}
+function renderTttMessage(message){$("#tttMessage").textContent=message;}
+function resetTtt(){
+  board=Array(9).fill("");tttOver=false;tttBusy=false;
+  renderTttMessage(txt("نوبت تو است. تو X هستی.","Your turn. You are X."));
+  renderTtt();
+}
+function tttMove(i){
+  if(tttOver||tttBusy||board[i])return;
+  board[i]="X";
+  const result=winner(board);
+  if(result){finishTtt(result);return;}
+  tttBusy=true;renderTtt();renderTttMessage(txt("نوبت کامپیوتر...","Computer's turn..."));
+  setTimeout(()=>{
+    const move=chooseCpuMove();
+    if(move!==-1)board[move]="O";
+    tttBusy=false;
+    const r=winner(board);
+    if(r){finishTtt(r);return;}
+    renderTtt();renderTttMessage(txt("نوبت تو است.","Your turn."));
+  },350);
+}
+function chooseCpuMove(){
+  // Take a winning move, block the player, then prefer center/corners.
+  for(const mark of ["O","X"]){
+    for(let i=0;i<9;i++){
+      if(board[i])continue;
+      board[i]=mark;const won=winner(board)===mark;board[i]="";
+      if(won)return i;
     }
-
-    state.courses.push(id);
-    const name = courseNames[id][state.language === "fa" ? 0 : 1];
-    state.tasks.unshift({
-      id: Date.now().toString(36) + Math.random().toString(36).slice(2, 7),
-      title: currentText("شروع مسیر یادگیری: ", "Start learning path: ") + name,
-      category: "study",
-      priority: "normal",
-      done: false
-    });
-
-    saveState();
-    renderCourseButtons();
-    renderTasks();
-    renderStats();
-    showToast(currentText("مسیر به برنامه‌ی تو اضافه شد.", "Learning path added to your plan."));
-  });
-});
-
-/* Local idea generator — templates, not an AI model */
-$("#ideaBtn").addEventListener("click", () => {
-  const topic = $("#ideaTopic").value.trim();
-  if (!topic) {
-    showToast(currentText("اول یک موضوع وارد کن.", "Enter a topic first."));
-    $("#ideaTopic").focus();
-    return;
   }
-
-  const ideas = state.language === "fa" ? [
-    `۱. ساخت یک وب‌سایت ساده درباره‌ی ${topic}`,
-    `۲. تهیه‌ی یک راهنمای کوتاه و کاربردی درباره‌ی ${topic}`,
-    `۳. طراحی یک ابزار کوچک برای کمک به علاقه‌مندان ${topic}`,
-    `۴. ساخت یک مجموعه‌ی آموزشی مرحله‌به‌مرحله درباره‌ی ${topic}`,
-    `۵. انجام یک پروژه‌ی تحقیقاتی کوچک برای بررسی جنبه‌های مختلف ${topic}`
-  ] : [
-    `1. Build a simple website about ${topic}.`,
-    `2. Create a short, practical guide to ${topic}.`,
-    `3. Design a small tool for people interested in ${topic}.`,
-    `4. Make a step-by-step learning series about ${topic}.`,
-    `5. Run a small research project exploring ${topic}.`
-  ];
-
-  $("#ideaOutput").textContent = ideas.join("\n\n");
-});
-
-$("#copyIdea").addEventListener("click", () => copyText($("#ideaOutput").textContent));
-
-/* Daily planner — local template */
-$("#planBtn").addEventListener("click", () => {
-  const priorities = ["#priority1", "#priority2", "#priority3"]
-    .map((selector) => $(selector).value.trim())
-    .filter(Boolean);
-
-  if (!priorities.length) {
-    showToast(currentText("حداقل یک اولویت وارد کن.", "Enter at least one priority."));
-    return;
-  }
-
-  const plan = priorities.map((priority, index) => {
-    const number = index + 1;
-    const time = state.language === "fa"
-      ? ["صبح", "میانه‌ی روز", "عصر"][index]
-      : ["Morning", "Midday", "Evening"][index];
-
-    return `${number}. ${time}: ${priority}\n   ${currentText(
-      "یک بازه‌ی ۲۵ دقیقه‌ای برای این کار در نظر بگیر.",
-      "Set aside one 25-minute focus block for this task."
-    )}`;
-  });
-
-  $("#planOutput").textContent =
-    currentText("برنامه‌ی پیشنهادی امروز:\n\n", "Suggested plan for today:\n\n") +
-    plan.join("\n\n") +
-    "\n\n" +
-    currentText("در پایان روز، نتیجه را بررسی کن و برنامه‌ی فردا را تنظیم کن.",
-                "At the end of the day, review your progress and plan tomorrow.");
-});
-
-$("#copyPlan").addEventListener("click", () => copyText($("#planOutput").textContent));
-
-/* Text counter */
-function updateTextCounter() {
-  const text = $("#counterInput").value;
-  const trimmed = text.trim();
-  const words = trimmed ? trimmed.split(/\s+/u).length : 0;
-  const chars = text.length;
-  const reading = words ? Math.max(1, Math.ceil(words / 200)) : 0;
-
-  $("#wordCount").textContent = localNumber(words);
-  $("#charCount").textContent = localNumber(chars);
-  $("#readTime").textContent = localNumber(reading);
+  if(!board[4])return 4;
+  const corners=[0,2,6,8].filter(i=>!board[i]);
+  if(corners.length)return corners[Math.floor(Math.random()*corners.length)];
+  const free=board.map((v,i)=>v?null:i).filter(v=>v!==null);
+  return free.length?free[Math.floor(Math.random()*free.length)]:-1;
 }
-$("#counterInput").addEventListener("input", updateTextCounter);
-
-/* AI connection placeholder — deliberately does not fake a response */
-$("#aiBtn").addEventListener("click", () => {
-  const prompt = $("#aiPrompt").value.trim();
-  if (!prompt) {
-    showToast(currentText("اول درخواستت را بنویس.", "Write your request first."));
-    $("#aiPrompt").focus();
-    return;
-  }
-
-  $("#aiOutput").textContent = currentText(
-    "درخواستت آماده است، اما بک‌اند هوش مصنوعی هنوز پیکربندی نشده است.\n\nبرای دریافت پاسخ واقعی باید:\n۱. یک بک‌اند امن راه‌اندازی شود.\n۲. کلید API فقط در متغیر محیطی سرور ذخیره شود.\n۳. مرورگر درخواست را به بک‌اند بفرستد.\n۴. بک‌اند پاسخ مدل را برگرداند.\n\nهیچ درخواست آنلاینی در این نسخه ارسال نشده است.",
-    "Your request is ready, but the AI backend is not configured yet.\n\nTo receive a real answer:\n1. Deploy a secure backend.\n2. Store the API key only in a server environment variable.\n3. Send the browser request to your backend.\n4. Return the model response from the backend.\n\nNo online request has been sent by this version."
-  );
-});
-
-async function copyText(text) {
-  try {
-    if (navigator.clipboard && window.isSecureContext) {
-      await navigator.clipboard.writeText(text);
-    } else {
-      const area = document.createElement("textarea");
-      area.value = text;
-      area.style.position = "fixed";
-      area.style.opacity = "0";
-      document.body.appendChild(area);
-      area.select();
-      const ok = document.execCommand("copy");
-      area.remove();
-      if (!ok) throw new Error("Copy failed");
-    }
-    showToast(currentText("کپی شد.", "Copied."));
-  } catch {
-    showToast(currentText("کپی خودکار ممکن نشد؛ متن را دستی انتخاب کن.", "Automatic copy failed. Select the text manually."));
+function finishTtt(result){
+  tttOver=true;
+  if(result==="X"){
+    data.tttWins++;save();renderTttMessage(txt("بردی! آفرین!","You won! Great job!"));
+    renderTtt();awardXP(25,"Tic-Tac-Toe");
+  }else if(result==="O"){
+    data.tttLosses++;save();renderTttMessage(txt("این بار کامپیوتر برد. دوباره تلاش کن!","The computer won this time. Try again!"));
+    renderTtt();
+  }else{
+    renderTttMessage(txt("مساوی شد! بازی خوبی بود.","It's a draw! Well played."));
+    renderTtt();
   }
 }
+$("#tttReset").addEventListener("click",resetTtt);
 
-/* Initial rendering */
-applyTheme();
-renderTasks();
-renderStats();
-updateTimer();
-updateTextCounter();
-renderCourseButtons();
-applyLanguage();
-</script>l
+/* Reset all local progress */
+$("#resetAll").addEventListener("click",()=>{
+  const yes=confirm(txt("مطمئنی؟ تمام XP، رکوردها و دستاوردها حذف می‌شوند.","Are you sure? All XP, records, and achievements will be deleted."));
+  if(!yes)return;
+  const language=data.language;
+  data={...defaultData,language};
+  save();renderProfile();
+  data.reactionBest=null;data.clickBest=0;data.memoryBest=null;data.guessBest=null;
+  $("#reactionBest").textContent="—";$("#clickBest").textContent="0";$("#memoryBest").textContent="—";$("#guessBest").textContent="—";
+  $("#tttWins").textContent="0";$("#tttLosses").textContent="0";
+  resetGuess();resetTtt();startMemory();
+  toast(txt("پیشرفت‌ها پاک شدند.","Progress has been reset."));
+});
+
+/* Initial state */
+function init(){
+  $("#reactionBest").textContent=data.reactionBest===null?"—":data.reactionBest+" ms";
+  $("#clickBest").textContent=num(data.clickBest);
+  $("#memoryBest").textContent=data.memoryBest===null?"—":num(data.memoryBest);
+  $("#guessBest").textContent=data.guessBest===null?"—":num(data.guessBest);
+  renderProfile();resetGuess();resetTtt();startMemory();
+  applyLanguage();
+}
+init();
+</script>
 </body>
 </html>
